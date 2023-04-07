@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rakin Munim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: #fff;
+			color: #000;
+			font-family: 'Barlow', sans-serif;
+			margin: 0;
+		}
+        .header .name {
+  font-size: 18px;
+}
+		
+		.header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 60px;
+			padding: 0 10%;
+			border-bottom: 1px solid #000;
+			font-size: 20px;
+		}
+		
+		.header a {
+			color: #000;
+			text-decoration: none;
+			margin-left: 20px;
+			font-size: 14px;
+		}
+		
+		.header a:hover {
+			text-decoration: underline;
+		}
+		
+		.main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 50px 10%;
+		}
+		
+		.main h2 {
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		
+		.main p {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		
+		.footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 60px;
+			color: #000;
+			font-size: 18px;
+			letter-spacing: 2px;
+			border-top: 1px solid #000;
+		}
+
+		.footer a {
+			margin-right: 10px;
+            color: black;
+		}
+
+        .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-item {
+  position: relative;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.gallery-item:hover .description {
+  transform: translateY(0);
+}
+
+.main ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main li {
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 600px;
+      
+    }
+    .main a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 24px;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color 0.2s ease-in-out;
+    }
+    .main a:hover {
+      border-bottom-color: #000;
+    }
+    .main p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+        
+
+
+
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div>
+            <a href="index.html" class="name">Rakin Munim</a>
+		</div>
+		<nav>
+			<a href="project_gallery.html">Projects</a>
+			<a href="press.html">Press</a>
+			<a href="randomfun.html">RandomFUN</a>
+		</nav>
+	</header>
+
+    <main class="main">
+        <h2>Press</h2>
+        <ul>
+          <li>
+            <a href="#">Coming Soon</a>
+            <p>Coming Soon</p>
+          </li>
+          
+        </ul>
+    </main>
+
+	<footer class="footer">
+        <a href="https://www.linkedin.com/in/rakinmunim"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/rakin374"><i class="fab fa-github"></i></a>
+        <a href="mailto:rakin374@gmail.com"><i class="far fa-envelope"></i></a>
+      </footer>
+</body>
+</html>
