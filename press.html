@@ -14,69 +14,70 @@
 			color: #000;
 			font-family: 'Barlow', sans-serif;
 			margin: 0;
+      align-items: center;
+      
 		}
 
+    .title{
+      font-size: 36px;
+			font-weight: normal;
+			margin-bottom: 20px;
+			text-align: left;
+    }
+    .title_div{
+      padding-left: 10%;
+    }
+    
 
-
-		
+  
 		.main {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			padding: 50px 10%;
+			align-items: left;
+			padding-left: 10%;
+      
 		}
 		
-		.main h2 {
-			font-size: 36px;
-			font-weight: bold;
+		.main h2{
+			font-size: 25px;
+			font-weight: normal;
 			margin-bottom: 20px;
-			text-align: center;
+			text-align: left;
+      text-decoration: underline;
 		}
 		
-		.main p {
-			font-size: 18px;
-			line-height: 1.5;
-			margin-bottom: 30px;
-			text-align: center;
-		}
+    .main ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+    .main li {
+      margin-bottom: 40px;
+      text-align: left;
+      max-width: 600px;
+      
+    }
+    .main a {
+      color: #000;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 24px;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color 0.2s ease-in-out;
+    }
+    .main a:hover {
+      border-bottom-color: #000;
+    }
+    .main p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
 
-
-    .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.gallery-item {
-  position: relative;
-  width: 30%;
-  margin-bottom: 20px;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.gallery-item .description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  font-size: 18px;
-  text-align: center;
-}
-
-
-.gallery-item:hover .overlay {
-  opacity: 1;
-}
-
-.overlay {
+    .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,59 +93,28 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-
-.gallery-item:hover .description {
-  transform: translateY(0);
-}
-
-.main ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .main li {
-      margin-bottom: 40px;
-      text-align: center;
-      max-width: 600px;
-      
-    }
-    .main a {
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 24px;
-      border-bottom: 1px solid transparent;
-      transition: border-bottom-color 0.2s ease-in-out;
-    }
-    .main a:hover {
-      border-bottom-color: #000;
-    }
-    .main p {
-      font-size: 18px;
-      line-height: 1.5;
-      margin-top: 10px;
-    }
-
         
-
+    
 
 
 	</style>
 </head>
 <body>
   <div id="header-container"></div>
+
+  <div class = title_div > 
+    <h2 class = "title">Writings</h2>
+    <p> Here are some general writings on various subjects. It is grouped by type, with the latest works at the top. Readers beware!</p>
+  </div>
+  
     <main class="main">
-        <h2>Press</h2>
-        <ul>
-          <li>
-            <a href="#">Coming Soon</a>
-            <p>Coming Soon</p>
-          </li>
-          
-        </ul>
+      
+
+        <h2>Computer Science</h2>
+        <h2>MISC</h2>
+  
+
+       
     </main>
 
     <div id="footer-container"></div>
