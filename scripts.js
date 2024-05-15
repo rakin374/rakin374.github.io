@@ -14,3 +14,9 @@ $(document).ready(function() {
     // Load Footer
     $("#footer-container").load(footerPath);
 });
+
+
+function testFunc() {
+   print("HelloWorld")
+}
+
