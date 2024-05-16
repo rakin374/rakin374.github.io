@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rakin Munim</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		
+		<script src="scripts.js"></script>
+		<style>
+			body {
+				background-color: #fff;
+				color: #000;
+				font-family:  sans-serif;
+				margin: 0;
+			}
+
+            h3{
+                font-size: 25px;
+				font-weight: normal;
+				margin-bottom: 20px;
+				text-align: left;
+                font-family: sans-serif;
+            }
+
+
+			
+			.main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 50px 10%;
+			}
+			
+			h1{
+				font-family: sans-serif;
+				font-weight: normal;
+				font-size: 8vh;
+			}
+			.main h2 {
+				font-size: 25px;
+				font-weight: normal;
+				margin-bottom: 20px;
+				text-align: left;
+                font-family: sans-serif;
+			}
+
+			.center {
+				border: 5px solid;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 10px;
+				}
+
+            .title-container {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                margin-bottom: 20px; /* Add margin between title and ticker */
+            }
+
+            .title-container spacer {
+                flex-grow: 1;
+                max-width: 75%;
+            }
+
+            .title {
+                flex-shrink: 0;
+                white-space: nowrap; /* Prevent wrapping if necessary */
+            }
+
+			#name{
+				font-family: sans-serif;
+				font-weight: normal;
+				font-size: 10vh;
+			}
+
+            .matter-container {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 20px; /* Add margin to create space */
+                margin-bottom: 20px; /* Add margin to create space */
+            }
+
+
+            .mc-spacer {
+                flex-grow: 1;
+                max-width: 20%;
+            }
+
+            .ticker-container{
+                max-height: 30px;
+                margin-bottom: 20px; /* Add margin to create space */
+                width:100vw;
+            }
+
+
+
+
+
+
+       
+
+
+           
+            
+
+
+
+		</style>
+	</head>
+<body>
+    <div id="header-container"></div>
+    <main class="main">
+        <div class="title-container">
+            <h1 class="title">About Me - in progress</h1>
+            <div class="spacer"></div>
+        </div>
+        <div class ="ticker-container"></div>
+        <div class = "matter-container">
+            
+            <h2 class = "matter-text">
+                To descibe a human, in a few paragraphs or less, is a difficult and errorprone task. Every human is 
+                involved in many parts of the the worldly affairs and exists as a superposition of archetypes. One human can 
+                take on the being of siblings, fathers, nurses, scoundrels, geniuses, and more. Sometimes simultaneously. Nevertheless there 
+                is good news in this. Though their roles and lives can be immensily broad and diffiuclt to hash, their being is unlimited. 
+                This is my philosophy to life. 
+                <br>
+                <br>
+            </h2>
+            
+        </div>
+       
+        
+		  
+	</main>
+    <div id="footer-container"></div>
+
+	
+</body>
+
+
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the ticker HTML dynamically
+        fetch('contactTicker.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('.ticker-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading ticker:', error));
+    });
+
+    function initializeTicker() {
+        // Add event listeners or any other functionality specific to the ticker
+        const ticker = document.getElementById('ticker');
+        let isPaused = false;
+
+        function pauseTicker() {
+            isPaused = true;
+            ticker.style.animationPlayState = 'paused';
+        }
+
+        function resumeTicker() {
+            isPaused = false;
+            ticker.style.animationPlayState = 'running';
+        }
+
+        ticker.addEventListener('mouseover', pauseTicker);
+        ticker.addEventListener('mouseout', resumeTicker);
+    }
+</script>

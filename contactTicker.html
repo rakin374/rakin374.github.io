@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolving Stock Ticker</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .ticker-containery {
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center items vertically */
+            width: 100%;
+            overflow: hidden;
+            height: 40px; /* Set height to auto */
+            background-color: black;
+            
+        }
+
+        .ticker {
+            white-space: nowrap;
+            animation: tickerMove 10s linear infinite; /* Adjust duration as needed */
+            height: 100%;
+        }
+
+        .tickerObject {
+            /* Apply font styling here */
+            font-family: sans-serif; /* Example font */
+            font-size: 25px; /* Example font size */
+            color: white; /* Example color */
+
+            text-decoration: none; /* Remove underline */
+        }
+
+        .ticker-item {
+            display: inline-block;
+            padding: 0 0px; /* Adjust padding as needed */
+        }
+
+    
+
+
+        @keyframes tickerMove {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%); /* Adjust distance as needed */
+            }
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="ticker-containery" id="ticker-containery" onmouseover="pauseTicker()" onmouseout="resumeTicker()">
+            <div class="ticker" id="ticker">
+                <div class="ticker-item">
+                    <a href="/index.html" class="tickerObject">Contact: rakin374@(big email provider starting with g).com </a>
+                </div>
+                
+                <!-- Add more ticker items as needed -->
+            </div>
+        
+    </div>
+
+    <script>
+        const ticker = document.getElementById('ticker');
+        let isPaused = false;
+
+        function pauseTicker() {
+            isPaused = true;
+            ticker.style.animationPlayState = 'paused';
+        }
+
+        function resumeTicker() {
+            isPaused = false;
+            ticker.style.animationPlayState = 'running';
+        }
+    </script>
+</body>
+</html>
