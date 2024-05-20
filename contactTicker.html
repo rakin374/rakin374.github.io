@@ -27,7 +27,9 @@
         .ticker {
             white-space: nowrap;
             animation: tickerMove 10s linear infinite; /* Adjust duration as needed */
-            height: 100%;
+            
+            flex-direction: column;
+            vertical-align: middle;
         }
 
         .tickerObject {
@@ -35,13 +37,14 @@
             font-family: sans-serif; /* Example font */
             font-size: 25px; /* Example font size */
             color: white; /* Example color */
-
+            align-items: center; /* Center items vertically */
             text-decoration: none; /* Remove underline */
         }
 
         .ticker-item {
             display: inline-block;
             padding: 0 0px; /* Adjust padding as needed */
+            vertical-align: middle;
         }
 
     
