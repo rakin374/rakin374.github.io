@@ -23,13 +23,7 @@
 				align-items: center;
 				padding: 50px 10%;
 			}
-            .articles-ul a{
-                font-family: sans-serif;
-				font-weight: normal;
-				font-size: 24px;
-                text-decoration: none;
-                color: darkslateblue
-            }
+           
 			
 			h1{
 				font-family: sans-serif;
@@ -40,11 +34,11 @@
             h2{
 				font-family: sans-serif;
 				font-weight: normal;
-				font-size: 5vh;
+				font-size: 24px;
 			}
 
 			h3 {
-				font-size: 25px;
+				font-size: 20px;
 				font-weight: normal;
 				margin-bottom: 20px;
 				text-align: left;
@@ -60,6 +54,12 @@
 				padding: 10px;
 				}
 
+            .title-container {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                margin-bottom: 20px; /* Add margin between title and ticker */
+            }
 
             .title-container spacer {
                 flex-grow: 1;
@@ -69,22 +69,9 @@
             .title {
                 flex-shrink: 0;
                 white-space: nowrap; /* Prevent wrapping if necessary */
-                color: white;
             }
 
-            .title-container {
-                display: flex;
-                width: 100%;
-                flex-direction: row;
-                margin-bottom: 20px; /* Add margin between title and ticker */
-                background-color: black;
-            }
-
-			#name{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 10vh;
-			}
+	
 
             .matter-container {
                 display: flex;
@@ -95,24 +82,7 @@
             }
 
 
-            .mc-spacer {
-                flex-grow: 1;
-                max-width: 20%;
-            }
-
-      
-            .articles-ul{
-                font-size: 25px;
-				font-weight: normal;
-				margin-bottom: 20px;
-				text-align: left;
-                font-family: sans-serif;
-            }
-
-           
-            
-
-
+    
 
 		</style>
 	</head>
@@ -121,30 +91,18 @@
     <main class="main">
         <div class="title-container">
             <h1 class="title">What is a Hilbert Space?</h1>
-            
             <div class="spacer"></div>
         </div>
-        <h2>MATH AND PHYSICS</h2>
-        <div class="image-container">
-            <a href="https://www.ligo.caltech.edu/">
-                <img src="ligo.jpg" , style="max-width: 100%;">
-            </a>
-            
-            <div class="image-attribution">
-                Credit : LIGO
-            </div>
-		</div>
 
         <div class = "matter-container">
-            
+            <div>
+                <h3>A friend recently asked me what a hilbert space was. I felt like I should know it but I didn't. 
+                    I have recently been trying to study quantum computing, using the famous Quantum Compuatation and Quantum 
+                    Information by Michael Nielsen and Isaac Chuang as the foundation. In this document I will try to explain 
+                    what Hilbert Space and the intersting parts of it. 
+                </h3>
+            </div>
          
-            <h2>Articles </h2>
-
-            <ul class = "articles-ul">
-                <li > <a href="MaphyWorks/wavetheory-0.html">Wave Mechanics Behind Ligo</a></li>
-                <li > <a href="/sample_work_template.html">What is a Hilbert Space?</a></li>
-            </ul>
-            
         </div>
        
         

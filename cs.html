@@ -34,7 +34,7 @@
 			h1{
 				font-family: sans-serif;
 				font-weight: normal;
-				font-size: 8vh;
+				font-size: 40px;
 			}
 
             h2{
@@ -60,6 +60,12 @@
 				padding: 10px;
 				}
 
+            .title-container {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                margin-bottom: 20px; /* Add margin between title and ticker */
+            }
 
             .title-container spacer {
                 flex-grow: 1;
@@ -69,15 +75,6 @@
             .title {
                 flex-shrink: 0;
                 white-space: nowrap; /* Prevent wrapping if necessary */
-                color: white;
-            }
-
-            .title-container {
-                display: flex;
-                width: 100%;
-                flex-direction: row;
-                margin-bottom: 20px; /* Add margin between title and ticker */
-                background-color: black;
             }
 
 			#name{
@@ -100,7 +97,12 @@
                 max-width: 20%;
             }
 
-      
+            .ticker-container{
+                max-height: 30px;
+                margin-bottom: 20px; /* Add margin to create space */
+                width:100vw;
+            }
+
             .articles-ul{
                 font-size: 25px;
 				font-weight: normal;
@@ -120,11 +122,11 @@
     <div id="header-container"></div>
     <main class="main">
         <div class="title-container">
-            <h1 class="title">What is a Hilbert Space?</h1>
+            <h1 class="title">How can we train models to understand USDZs?</h1>
             
             <div class="spacer"></div>
         </div>
-        <h2>MATH AND PHYSICS</h2>
+        <h2>COMPUTING</h2>
         <div class="image-container">
             <a href="https://www.ligo.caltech.edu/">
                 <img src="ligo.jpg" , style="max-width: 100%;">
@@ -134,16 +136,15 @@
                 Credit : LIGO
             </div>
 		</div>
-
         <div class = "matter-container">
             
          
             <h2>Articles </h2>
-
-            <ul class = "articles-ul">
-                <li > <a href="MaphyWorks/wavetheory-0.html">Wave Mechanics Behind Ligo</a></li>
-                <li > <a href="/sample_work_template.html">What is a Hilbert Space?</a></li>
-            </ul>
+            <h3> Still to be added</h3>
+            <!-- <ul class = "articles-ul">
+                <h4>Ligo Qs</h4>
+                <li > <a href="/sample_work_template.html">Wave Mechanics Behind Ligo</a></li>
+            </ul> -->
             
         </div>
        
