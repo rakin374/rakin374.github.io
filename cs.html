@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 		
-		<script src="scripts.js"></script>
+		<script src="Scripts/scripts.js"></script>
 		<style>
 			body {
 				background-color: #fff;
@@ -21,7 +21,9 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				padding: 50px 10%;
+				padding: 50px ;
+                padding-top: 10px;
+                padding-bottom: 10px;
 			}
             .articles-ul a{
                 font-family: sans-serif;
@@ -62,26 +64,14 @@
 
             .title-container {
                 display: flex;
-                width: 100%;
                 flex-direction: row;
-                margin-bottom: 20px; /* Add margin between title and ticker */
-            }
-
-            .title-container spacer {
-                flex-grow: 1;
-                max-width: 75%;
+                margin: 10px;
             }
 
             .title {
                 flex-shrink: 0;
                 white-space: nowrap; /* Prevent wrapping if necessary */
             }
-
-			#name{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 10vh;
-			}
 
             .matter-container {
                 display: flex;
@@ -91,17 +81,14 @@
                 margin-bottom: 20px; /* Add margin to create space */
             }
 
-
-            .mc-spacer {
-                flex-grow: 1;
-                max-width: 20%;
-            }
-
-            .ticker-container{
-                max-height: 30px;
+            .image-container {
+                display: flex;
+                width: 30%;
+                flex-direction: column;
+                margin-top: 20px; /* Add margin to create space */
                 margin-bottom: 20px; /* Add margin to create space */
-                width:100vw;
             }
+
 
             .articles-ul{
                 font-size: 25px;
@@ -110,6 +97,8 @@
 				text-align: left;
                 font-family: sans-serif;
             }
+
+
 
            
             
@@ -122,24 +111,20 @@
     <div id="header-container"></div>
     <main class="main">
         <div class="title-container">
-            <h1 class="title">How can we train models to understand USDZs?</h1>
-            
-            <div class="spacer"></div>
-        </div>
-        <h2>COMPUTING</h2>
-        <div class="image-container">
-            <a href="https://www.ligo.caltech.edu/">
-                <img src="ligo.jpg" , style="max-width: 100%;">
-            </a>
-            
-            <div class="image-attribution">
-                Credit : LIGO
+            <h1 class="big-caslon">Computer Science</h1>
+            <div class="image-container">
+                <a>
+                    <img src="Media/Mains/compsci.jpeg" , style="max-width: 100%;">
+                </a>
             </div>
-		</div>
+        </div>
+        
+      
         <div class = "matter-container">
             
          
-            <h2>Articles </h2>
+            <h2> Latest: Working with .USD file format
+            </h2>
             <h3> Still to be added</h3>
             <!-- <ul class = "articles-ul">
                 <h4>Ligo Qs</h4>
