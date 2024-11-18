@@ -1,23 +1,11 @@
-
-
-MY STATIC WEBSITE! 
-LAST UPDATED FEB 7TH 2024
-Version 2.7.24
+Rakin's Semantic Web
+Last Updated Nov 17th 2024
 
 # TODO:
-GENERATE DICTIONARY HTML FILE
-GENERATEE WERID THINKGS HTML FILE AND POPULATE IT 
-GENERATE 'SEARCHING THRU IMAGES' HTML FILE 
-FIX BUG 1
-
-# BUGS
-
-None! 
+- Matrix-Pixel-Index Feature 
+- Resume
+- Write some articles
 
 
-# FIXES: (with original bugs)
-1. 
--  ISSUE: script files don't run in subfolders well. Figure out a solution. B/C of this the footer and header for paintings.html do not load. 
--  FIXED: subfoldering problems have been solves with absolute path using '/' before locations.
 
 
