@@ -86,14 +86,6 @@
                 margin-bottom: 20px; /* Add margin to create space */
             }
 
-            .image-container {
-                display: flex;
-                width: 30%;
-                flex-direction: column;
-                margin-top: 20px; /* Add margin to create space */
-                margin-bottom: 20px; /* Add margin to create space */
-            }
-
 
             .articles-ul{
                 font-size: 25px;
@@ -103,45 +95,94 @@
                 font-family: sans-serif;
             }
 
+			
+
+			.image-container {
+			position: relative;
+			max-width: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			}
+
+			.featured-section p{
+				align-items: left;
+			}
+
+			.image-attribution {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.8); /* add a semi-transparent background to the text for readability */
+			padding: 10px;
+			text-align: center;
+			font-size: 14px;
+			}
+
+			#profile{
+				width:100vw;
+				height:80vh;
+				margin: 0px;
+				background:blue;
+			}
+			.center {
+				border: 5px solid;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 10px;
+				}
+			#name{
+				font-family: sans-serif;
+				font-weight: normal;
+				font-size: 10vh;
+			}
+
+
+
+           
+            
+
+
+
 		</style>
 	</head>
-<body>
-    <div id="header-container"></div>
-    <main class="main">
-        <div class="title-container">
-
-            <div class="flex vstack">
-                <h1 class="big-caslon">Computer Science</h1>
-               <h4> machineology </h4>
+    <body>
+        <div id="header-container"></div>
+        <main class="main">
+            <div class="title-container">
+                <div class="flex vstack">
+                    <h1 class="big-caslon">Humanities</h1>
+                <h4> Art History, Music, Philosophy, etc </h4>
+                </div>
             </div>
-        </div>
 
-
+            <div class="image-container">
+                <img src="Media/Mains/index.jpeg" alt="Motherly Voice", style="max-width: 100%;">
+                <div class="image-attribution">
+                    Motherly Voice
+                </div>
+            </div>
         
-      
-        <div class = "matter-container">
-            <h3> Important Questions of 2024 </h3>
-                <ul class = "articles-ul">
-                    <a> <h4> What will be the impacts of AI that can reason at the level of PhDs? </h4> </a>
-                </ul>
-            <h3> 2024 Projects (Developing)</h3>
-                <ul class = "articles-ul">
-                    <a> <h4> Bb </h4> </a>
-                    <a> <h4> Sp </h4> </a>
-                    <a> <h4> Tf </h4> </a>
-                </ul>
-        </div>
-       
-        
-		  
-	</main>
-    <div id="footer-container"></div>
-
-	
-</body>
-
-
+            <div class = "matter-container">
+                <h3> Important Questions of 2024 </h3>
+                    <ul class = "articles-ul">
+                        <a> <h4> What is the future for the people of ###### ? </h4> </a>
+                    </ul>
+                <h3> Articles </h3>
+                    <ul class = "articles-ul">
+                        <a> <h4> * Romanticism and Baroque Arts BU </h4> </a>
+                        <a> <h4> * The Sisyphus Story  </h4> </a>
+                        <a> <h4> * The Amazing Albums of ###### </h4> </a>
+                    </ul>
+            </div>
+        </main>
+        <div id="footer-container"></div>
+    </body>
 </html>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Load the ticker HTML dynamically
@@ -157,17 +198,14 @@
         // Add event listeners or any other functionality specific to the ticker
         const ticker = document.getElementById('ticker');
         let isPaused = false;
-
         function pauseTicker() {
             isPaused = true;
             ticker.style.animationPlayState = 'paused';
         }
-
         function resumeTicker() {
             isPaused = false;
             ticker.style.animationPlayState = 'running';
         }
-
         ticker.addEventListener('mouseover', pauseTicker);
         ticker.addEventListener('mouseout', resumeTicker);
     }

@@ -11,7 +11,7 @@
 		<script src="Scripts/scripts.js"></script>
 		<style>
 			body {
-				background-color: #fff;
+				
 				color: #000;
 				font-family:  sans-serif;
 				margin: 0;
@@ -21,7 +21,9 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				padding: 50px 10%;
+				padding: 50px ;
+                padding-top: 10px;
+                padding-bottom: 10px;
 			}
             .articles-ul a{
                 font-family: sans-serif;
@@ -34,7 +36,7 @@
 			h1{
 				font-family: sans-serif;
 				font-weight: normal;
-				font-size: 8vh;
+				font-size: 25px;
 			}
 
             h2{
@@ -44,9 +46,14 @@
 			}
 
 			h3 {
-				font-size: 25px;
+				font-size: 18px;
 				font-weight: normal;
-				margin-bottom: 20px;
+				text-align: left;
+                font-family: sans-serif;
+			}
+            h4 {
+				font-size: 15px;
+				font-weight: normal;
 				text-align: left;
                 font-family: sans-serif;
 			}
@@ -60,31 +67,16 @@
 				padding: 10px;
 				}
 
-
-            .title-container spacer {
-                flex-grow: 1;
-                max-width: 75%;
+            .title-container {
+                display: flex;
+                flex-direction: row;
+                margin: 10px;
             }
 
             .title {
                 flex-shrink: 0;
                 white-space: nowrap; /* Prevent wrapping if necessary */
-                color: white;
             }
-
-            .title-container {
-                display: flex;
-                width: 100%;
-                flex-direction: row;
-                margin-bottom: 20px; /* Add margin between title and ticker */
-                background-color: black;
-            }
-
-			#name{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 10vh;
-			}
 
             .matter-container {
                 display: flex;
@@ -94,13 +86,15 @@
                 margin-bottom: 20px; /* Add margin to create space */
             }
 
-
-            .mc-spacer {
-                flex-grow: 1;
-                max-width: 20%;
+            .image-container {
+                display: flex;
+                width: 30%;
+                flex-direction: column;
+                margin-top: 20px; /* Add margin to create space */
+                margin-bottom: 20px; /* Add margin to create space */
             }
 
-      
+
             .articles-ul{
                 font-size: 25px;
 				font-weight: normal;
@@ -109,6 +103,8 @@
                 font-family: sans-serif;
             }
 
+
+
            
             
 
@@ -116,47 +112,142 @@
 
 		</style>
 	</head>
-<body>
-    <div id="header-container"></div>
-    <main class="main">
-        <div class="title-container">
-            <h1 class="title">What is a Hilbert Space?</h1>
-            
-            <div class="spacer"></div>
-        </div>
-        <h2>MATH AND PHYSICS</h2>
-        <div class="image-container">
-            <a href="https://www.ligo.caltech.edu/">
-                <img src="ligo.jpg" , style="max-width: 100%;">
-            </a>
-            
-            <div class="image-attribution">
-                Credit : LIGO
+    <body>
+        <div id="header-container"></div>
+        <main class="main">
+            <div class="title-container">
+                <div class="flex vstack">
+                    <h1 class="big-caslon">Mathematics & Physics</h1>
+                <h4> truth and language </h4>
+                </div>
             </div>
-		</div>
-
-        <div class = "matter-container">
-            
-         
-            <h2>Articles </h2>
-
-            <ul class = "articles-ul">
-                <li > <a href="MaphyWorks/wavetheory-0.html">Wave Mechanics Behind Ligo</a></li>
-                <li > <a href="/sample_work_template.html">What is a Hilbert Space?</a></li>
-            </ul>
-            
-        </div>
-       
         
-		  
-	</main>
-    <div id="footer-container"></div>
+            <div class = "matter-container">
+                <h3> Important Questions of 2024 </h3>
+                    <ul class = "articles-ul">
+                        <a> <h4> What is the most important operation in QC? </h4> </a>
+                        <a> <h4> Intelligence beyond optimization </h4> </a>
+                    </ul>
+                <h3> Articles </h3>
+                    <ul class = "articles-ul">
+                        <a> <h4> * The Bigness of Hilbert Space </h4> </a>
+                        <a> <h4> * Optimization </h4> </a>
+                        <a> <h4> * Tensor Combinatorics </h4> </a>
+                        <a> <h4> * My Favorite Equations </h4> </a>
+                        <a> <h4> * Open Problems </h4> </a>
 
-	
-</body>
-
-
+                        <head>
+                            <title>Rakin Munim</title>
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                            <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                            
+                            <script src="Scripts/scripts.js"></script>
+                            <style>
+                                body {
+                                    
+                                    color: #000;
+                                    font-family:  sans-serif;
+                                    margin: 0;
+                                }
+                                
+                                .main {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    padding: 50px ;
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                }
+                                .articles-ul a{
+                                    font-family: sans-serif;
+                                    font-weight: normal;
+                                    font-size: 24px;
+                                    text-decoration: none;
+                                    color: darkslateblue
+                                }
+                                
+                                h1{
+                                    font-family: sans-serif;
+                                    font-weight: normal;
+                                    font-size: 25px;
+                                }
+                    
+                                h2{
+                                    font-family: sans-serif;
+                                    font-weight: normal;
+                                    font-size: 5vh;
+                                }
+                    
+                                h3 {
+                                    font-size: 18px;
+                                    font-weight: normal;
+                                    text-align: left;
+                                    font-family: sans-serif;
+                                }
+                                h4 {
+                                    font-size: 15px;
+                                    font-weight: normal;
+                                    text-align: left;
+                                    font-family: sans-serif;
+                                }
+                    
+                                .center {
+                                    border: 5px solid;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    padding: 10px;
+                                    }
+                    
+                                .title-container {
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin: 10px;
+                                }
+                    
+                                .title {
+                                    flex-shrink: 0;
+                                    white-space: nowrap; /* Prevent wrapping if necessary */
+                                }
+                    
+                                .matter-container {
+                                    display: flex;
+                                    width: 100%;
+                                    flex-direction: column;
+                                    margin-top: 20px; /* Add margin to create space */
+                                    margin-bottom: 20px; /* Add margin to create space */
+                                }
+                    
+                                .image-container {
+                                    display: flex;
+                                    width: 30%;
+                                    flex-direction: column;
+                                    margin-top: 20px; /* Add margin to create space */
+                                    margin-bottom: 20px; /* Add margin to create space */
+                                }
+                    
+                    
+                                .articles-ul{
+                                    font-size: 25px;
+                                    font-weight: normal;
+                                    margin-bottom: 20px;
+                                    text-align: left;
+                                    font-family: sans-serif;
+                                }
+                    
+                            </style>
+                        </head>
+                    </ul>
+            </div>
+        </main>
+        <div id="footer-container"></div>
+    </body>
 </html>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Load the ticker HTML dynamically
@@ -172,17 +263,14 @@
         // Add event listeners or any other functionality specific to the ticker
         const ticker = document.getElementById('ticker');
         let isPaused = false;
-
         function pauseTicker() {
             isPaused = true;
             ticker.style.animationPlayState = 'paused';
         }
-
         function resumeTicker() {
             isPaused = false;
             ticker.style.animationPlayState = 'running';
         }
-
         ticker.addEventListener('mouseover', pauseTicker);
         ticker.addEventListener('mouseout', resumeTicker);
     }
