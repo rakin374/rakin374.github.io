@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Pixel Grid with Color Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #grid {
+            display: grid;
+            margin: 20px auto;
+            border: 2px solid #000;
+            gap: 1px;
+        }
+        .pixel {
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        #colorButtons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .colorButton {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ccc;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .colorButton:hover {
+            opacity: 0.8;
+        }
+        #eraseButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        #eraseButton.active {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Editable Pixel Grid</h1>
+    <div id="grid"></div>
+    <div id="colorButtons">
+        <!-- Color buttons will be injected here by JavaScript -->
+    </div>
+
+    <button id="eraseButton" class="active">Erase Mode</button>
+    <label for="colorPicker">Color: </label>
+    <input type="color" id="colorPicker" value="#FF0000">
+
+    <script>
+        const gridSize = 16; // Specify grid size (e.g., 16x16)
+        const grid = document.getElementById('grid');
+        const colorButtons = document.getElementById('colorButtons');
+        const eraseButton = document.getElementById('eraseButton');
+        const colorPicker = document.getElementById('colorPicker');
+
+        const primaryColors = [
+            "#FF0000", // Red
+            "#0000FF", // Blue
+            "#FFFF00", // Yellow
+            "#008000", // Green
+            "#800080", // Purple
+            "#00FFFF", // Cyan
+            "#FF00FF", // Magenta
+            "#FFA500", // Orange
+            "#FFC0CB", // Pink
+            "#A52A2A"  // Brown
+        ];
+
+        // Set up the grid dimensions
+        grid.style.gridTemplateColumns = `repeat(${gridSize}, 20px)`;
+        grid.style.gridTemplateRows = `repeat(${gridSize}, 20px)`;
+
+        let selectedColor = "#FF0000"; // Default to red color
+        let isEraseMode = false; // Track whether erase mode is active
+        let isMouseDown = false; // Track mouse down event for gliding
+
+        // Create the grid of pixels
+        for (let i = 0; i < gridSize * gridSize; i++) {
+            const pixel = document.createElement('div');
+            pixel.classList.add('pixel');
+
+            // Function to apply color or erase to a pixel
+            const applyColorOrErase = () => {
+                if (isEraseMode) {
+                    pixel.style.backgroundColor = "#ffffff"; // Erase pixel
+                } else {
+                    pixel.style.backgroundColor = selectedColor; // Change pixel color
+                }
+            };
+
+            // Click event to color/erase
+            pixel.addEventListener('click', applyColorOrErase);
+
+            // Mouse down event to start gliding
+            pixel.addEventListener('mousedown', () => {
+                isMouseDown = true;
+                applyColorOrErase(); // Apply color/erase on mouse down
+            });
+
+            // Mouse over event to apply color/erase while gliding
+            pixel.addEventListener('mouseover', () => {
+                if (isMouseDown) {
+                    applyColorOrErase(); // Apply color/erase if mouse is down
+                }
+            });
+
+            // Mouse up event to stop gliding
+            document.addEventListener('mouseup', () => {
+                isMouseDown = false;
+            });
+
+            grid.appendChild(pixel);
+        }
+
+        // Create color buttons for the primary colors
+        primaryColors.forEach(color => {
+            const colorButton = document.createElement('div');
+            colorButton.classList.add('colorButton');
+            colorButton.style.backgroundColor = color;
+            colorButton.addEventListener('click', () => {
+                selectedColor = color; // Set the selected color
+                isEraseMode = false; // Turn off erase mode
+                eraseButton.classList.remove('active'); // Turn off erase button active state
+            });
+            colorButtons.appendChild(colorButton);
+        });
+
+        // Handle color picker changes
+        colorPicker.addEventListener('input', () => {
+            selectedColor = colorPicker.value;
+            isEraseMode = false; // Turn off erase mode when color is selected
+            eraseButton.classList.remove('active'); // Turn off erase button active state
+        });
+
+        // Handle erase button click
+        eraseButton.addEventListener('click', () => {
+            isEraseMode = !isEraseMode; // Toggle erase mode
+            if (isEraseMode) {
+                eraseButton.classList.add('active'); // Turn on erase button active state
+            } else {
+                eraseButton.classList.remove('active'); // Turn off erase button active state
+            }
+        });
+    </script>
+</body>
+</html>

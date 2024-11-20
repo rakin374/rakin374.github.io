@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Expanding Pixels</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 30px); /* Initial button size */
+            gap: 0; /* No space between buttons */
+            padding: 0;
+        }
+        .square-button {
+            width: 30px;
+            height: 30px;
+            border: none;
+            padding: 0;
+            margin: 0;
+            transition: all 0.3s ease; /* Smooth animation */
+        }
+        .square-button.expanded {
+            width: 60px; /* Expanded size */
+            height: 60px;
+            z-index: 1; /* Ensure expanded button is above others */
+        }
+    </style>
+</head>
+<body>
+    <div id="buttonContainer" class="container"></div>
+
+    <script>
+        // Configuration
+        const rows = 10; // Number of rows
+        const cols = 10; // Number of columns
+
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Get container element
+        const container = document.getElementById('buttonContainer');
+
+        // Create grid of buttons
+        for (let i = 1; i <= rows * cols; i++) {
+            // Create a button
+            const button = document.createElement('button');
+            button.className = 'square-button';
+
+            // Assign a random background color
+            button.style.backgroundColor = getRandomColor();
+
+            // Add event listener for click
+            button.addEventListener('click', () => {
+                // Remove "expanded" class from all buttons
+                document.querySelectorAll('.square-button').forEach(btn => {
+                    btn.classList.remove('expanded');
+                });
+
+                // Add "expanded" class to the clicked button
+                button.classList.add('expanded');
+            });
+
+            // Append button to container
+            container.appendChild(button);
+        }
+    </script>
+</body>
+</html>

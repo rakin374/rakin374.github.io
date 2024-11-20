@@ -1,19 +1,41 @@
-h1{
-    font-family: sans-serif;
-    font-weight: normal;
-    font-size: 8vh;
+
+
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-h2{
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    padding: 15%;
+}
+
+.articles-ul a {
     font-family: sans-serif;
     font-weight: normal;
-    font-size: 5vh;
+    font-size: 24px;
+    text-decoration: none;
+    color: darkslateblue; /* Fixed missing semicolon */
+}
+
+h1 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 21px;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: normal;
-    margin-bottom: 20px;
     text-align: left;
     font-family: sans-serif;
 }
@@ -24,3 +46,48 @@ h4 {
     text-align: left;
     font-family: sans-serif;
 }
+
+.center {
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column; /* Ensure the title and subtitle stack vertically */
+    align-items: center; /* Center the title and subtitle horizontally */
+}
+
+.title {
+    flex-shrink: 0;
+    white-space: nowrap; /* Prevent wrapping if necessary */
+}
+
+.matter-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px; /* Add margin to create space */
+    margin-bottom: 20px; /* Add margin to create space */
+}
+
+.image-container {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    margin-top: 20px; /* Add margin to create space */
+    margin-bottom: 20px; /* Add margin to create space */
+}
+
+.articles-ul {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: sans-serif;
+}
+
