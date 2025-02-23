@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rakin Munim</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<script src="/Scripts/scripts.js"></script>
+        <link rel="stylesheet" href="/Scripts/styles.css">
+	</head>
+    <body>
+        <div id="header-container"></div>
+        <main class="main">
+            <div class="title-container">
+                <div class="flex vstack">
+                    <h1 class="big-caslon">A Tiny Arx Journal </h1>
+                    <br>
+                    <br>
+                    <h4> This page just contains journal entries of some smaller ideas and concepts I would like to 
+                        highlight to others as I progress through my architectural studies.  
+
+                    </h4>
+                </div>
+            </div>
+        
+            <div class = "matter-container">
+                <h2> Entries</h2>
+                
+           
+
+             
+                    
+                <div>
+                <h3> Entry 0: I want to study arx</h3>
+                <p>
+                I want to study architecture! As I am completely my masters degree in AI, I'm left wondering what is next for me? 
+                Formal schooling is something I actually enjoy and my year away from school has taught me that I want this for a little bit longer. 
+                The benefits of a cohort of students, professors, and a collective circulumn are conditions I will never be able to 
+                attain after I age out of school. I thought about what I wanted. I could pursue more research and try for a PhD. It seemed cool, 
+                but I'm not sure I felt much natural gravity to it. The path seems dark, though maybe speaking to advisors could find 
+                a path. But I would have to resonate alot of passion all by myself. Also what would come after the PhD? Cloudly too. Where would I be 
+                physcially located? etc? These are details that are important for me. Software engineering is usually focused around city centers. Also what will my work be? 
+
+                I also though about Law school. A legal degree would give me the power to represent people in court, something that will be of value forever. 
+                I even tried to study for the LSAT. It was interesting for a bit, but I enjoy it more as a science than a profession. 
+
+                Medical school ruled out for obvious reasons. 
+
+                I eventually found MArch Programs the best fusion. A glove that fit correctly. It blended multiple parts of studies, gives better 
+                career prospects, and gives me a vision and a life I can work within and achieve my successes. I still am gambling in the background, 
+                but when not a gambler(metaphorically speaking) I would like to be an architect. 
+                </p>
+
+                </div>
+
+              
+
+                <!-- <h3> Past Works </h3>
+                <ul class = "articles-ul">
+                    <a href = ""> <h4> CWare   </h4> </a>
+                </ul> -->
+
+
+            </div>
+        </main>
+        <div id="footer-container"></div>
+    </body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the ticker HTML dynamically
+        fetch('contactTicker.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('.ticker-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading ticker:', error));
+    });
+
+    function initializeTicker() {
+        // Add event listeners or any other functionality specific to the ticker
+        const ticker = document.getElementById('ticker');
+        let isPaused = false;
+
+        function pauseTicker() {
+            isPaused = true;
+            ticker.style.animationPlayState = 'paused';
+        }
+
+        function resumeTicker() {
+            isPaused = false;
+            ticker.style.animationPlayState = 'running';
+        }
+
+        ticker.addEventListener('mouseover', pauseTicker);
+        ticker.addEventListener('mouseout', resumeTicker);
+    }
+</script>

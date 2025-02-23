@@ -27,7 +27,7 @@
 			h1{
 				font-family: sans-serif;
 				font-weight: normal;
-				font-size: 25px;
+				font-size: 2vh;
 			}
 
             h2{
@@ -37,17 +37,19 @@
 			}
 
 			h3 {
-				font-size: 18px;
 				font-weight: normal;
-				text-align: left;
                 font-family: sans-serif;
+				font-size: 18px;
 			}
+		
+			
             h4 {
 				font-size: 15px;
 				font-weight: normal;
 				text-align: left;
                 font-family: sans-serif;
 			}
+
 			.main p {
 				font-size: 18px;
 				line-height: 1.5;
@@ -65,7 +67,20 @@
 				border-bottom: 1px solid #000;
 			}
 
-		
+			.vstack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+				gap: 10px;
+				text-align: center;
+			}
+
+			.image-container img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			
 			.featured-section h3 {
 				font-style: italic;
 				font-weight: normal;
@@ -73,28 +88,11 @@
 				margin-bottom: 20px;
 			}
 
-			.image-container {
-			position: relative;
-			max-width: 80%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			}
 
 			.featured-section p{
 				align-items: left;
 			}
 
-			.image-attribution {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			background-color: rgba(255, 255, 255, 0.8); /* add a semi-transparent background to the text for readability */
-			padding: 10px;
-			text-align: center;
-			font-size: 14px;
-			}
 
 			#profile{
 				width:100vw;
@@ -124,41 +122,84 @@
 	<main class="main">
 		
 		<div class="featured-section">
-			<h2>ربِّ زِدْنِي عِلْماً <h2>
-			<h4>
-				Hello, I'm Rakin and welcome to my corner of the web. 
-				I am currently working on my masters degree at 
-					<a href= "https://www.bu.edu"> Boston University.</a> I study artifical intelligence. 
-				Before this, I completed my undergraduate in computer science, also from BU. I am deeply interested in research and understanding more 
-				about the world. Particularly, I hope to work on general-intelligence. It seems to combine everything nowadays. My expected graduation date
-				is Fall 2025. If all goes well hope to join a start a new graduate program. I am deciding between a PhD or MArch. I am swaying 
-				towards the latter, day by day. To find out more follow this link: here.
+			<h3>ربِّ زِدْنِي عِلْماً <h3>
+			<div>
+				<h1>
+				Hey, I'm Rakin and welcome to my public codex.
+				I am currently working on a masters degree at 
+				<a href= "https://www.bu.edu"> Boston University.</a> My program of study is artifical intelligence. 
+				Before this, I completed my undergraduate in computer science, also from BU. I am interested in multi modal AI and reasoning
+				systems. I am currently working on a musical project to help make synthetic music easier. For my general interests in AI follow
+				this link.  Aside from AI I like to design. I am particualrly interested in architectural design and hope to study it formally after my current degree finishes. 
+				For a understandiing of my education and what I have and wish to study follow this link. 
 				<br>
+				
+				</h1>
 				<br>
-				This website is an important part of my life's codex. I would like to use it to share two sides of my life. A: The formal academic works of my life
-				and B: the more subjective points of life. I am deeply ingratitude to my peers, professors, and the general humans of my life
-				as a whole and would like to share what I get to experience. I also need would like to start cataloging my work. (Win-Win-Win?)
+			
+				current projects 
+
+				<br>
+				- mini-marcel 
+				<br>
+				- berk
+				<br> 
+				- 1L 
+
+				
+
 				<br>
 				<br> 
-				Below: a graphic that has some relevance to me: 
-			</h4>
+
+				
+
+				<div style="background-color: black; color: yellow; padding: 10px;">
+					<h3>NoteL</h3>
+					<br>
+					<br> 
+					I am working on an updated version of my codex. Right now, you are interacting with this codex
+					through a web browser. This is not the optimal way to share across time. The current version was not designed with the semantic web in mind. 
+					The update will hopefully bring a smarter codex that's queryable and interactive. I will embed IEML and APL.  
+					You can read about the problem here. But it makes it difficult to think in a global sense. 
+					All thoughts should be written on a semantically connected text pad. Twitter was a good push at this, but all was
+					lost out after @Jack's departure. A revival is underway! Read more about IEML here. 
+					
+					<br>
+					todo: 
+					<br>
+					create a IMEL-complete text-pad. 
+					Enjoy the bugs you come across. 
+
+
+
+
+
+					<br> 
+					<br>
+				</div>
+								
+			</div>
 
 
 		</div>
 		
-		<div class="image-container">
-			<a href="https://www.wikiart.org/en/nicolas-poussin/mars-and-venus-1628">
-				<img src="/Media/mars_and_venus_poussin.jpg" alt="Mars and Venus, Nicolas-Poussin",  style="max-width: 100%">
-			</a>
-			<div class="image-attribution">
-				Mars and Venus, Nicolas-Poussin
-				<br>
-				Thoughts of Life
+		<div class="vstack">
+			<div class="image-container">
+				<a href="https://www.wikiart.org/en/nicolas-poussin/mars-and-venus-1628">
+					<img src="/Media/mars_and_venus_poussin.jpg" alt="Mars and Venus, Nicolas-Poussin">
+				</a>
+				<div class="image-attribution">
+					Mars and Venus, Nicolas-Poussin
+				</div>
 			</div>
-			
-		</div>     
-
-
+		
+			<div>
+				A painting that once was heavy at some point in time to me.
+				<br>
+				<strong>## Here demonstrates a limitation of a non-semantic web. I have to manually link everything. ##</strong>
+			</div>
+		</div>
+		
 
 		  
 	</main>
