@@ -8,6 +8,13 @@ Last Updated Nov 17th 2024
 - Matrix-Pixel-Index Feature 
 - Link Resume 
 - Marcel-Tensor 
+- 3D model showing 
+    - 
+
+Parametrically modeling engines? Talk from Utexas. 
+
+
+
 
 
 

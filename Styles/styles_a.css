@@ -1,0 +1,119 @@
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+
+h1 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 4vh;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 3vh;
+}
+
+
+h3 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 2vh;
+}
+
+
+h4 {
+    font-family: "Big Caslon", serif;
+    font-weight: normal;    
+    font-size: 4vh;
+}
+
+h5 {
+    font-family: "Big Caslon", serif;
+    font-weight: normal;
+    font-size: 3vh;
+}
+
+h6{
+
+    font-family: "Big Caslon", serif;
+    font-weight: normal;
+    font-size: 2vh;
+
+}
+
+.main {
+    font-size: 25px;
+    font-weight: normal;
+    
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.center {
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.title-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.title-container spacer {
+    flex-grow: 1;
+    max-width: 75%;
+}
+
+.title {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+#name {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 10vh;
+}
+
+.matter-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+    .mc-spacer {
+        flex-grow: 1;
+        max-width: 20%;
+    }
+
+.ticker-container {
+    max-height: 30px;
+    margin-bottom: 20px;
+    width: 100vw;
+}
+
+.index {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: sans-serif;
+}
