@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Some Project</title>
+
+<!--  STYLE AND SCRIPTING STUFF-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/scripts.js"></script>
+<!--  STYLE AND SCRIPTING STUFF-->
+
+<style>
+	body {
+        background-color: #fff;
+        color: #000;
+        font-family: 'Barlow', sans-serif;
+        margin: 0;
+        align-items: center;
+      
+    }
+
+    .title{
+        font-size: 30px;
+		font-weight: normal;
+		margin-bottom: 20px;
+		text-align: left;
+    }
+    
+    .title_div{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .title_p{
+        font-size: 19px;
+    }
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-left: 10%;
+        padding-right : 10%;
+        padding-bottom: 200px;
+    }
+		
+	.main h2{
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 20px;
+        text-align: left;
+        text-decoration: underline;
+	}
+		
+    .main ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    .main li {
+        margin-bottom: 40px;
+        text-align: left;
+        max-width: 600px;
+      
+    }
+    .main a {
+        color: #000;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 24px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.2s ease-in-out;
+    }
+    .main a:hover {
+        border-bottom-color: #000;
+    }
+    .main p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+        
+</style>
+</head>
+
+
+
+<body>
+    <div id="header-container"></div>
+    <!-- TITLE DIV-->
+    <div class = title_div > 
+        <h2 class = "title">IMACLE- Intelligent MApping of Camera and Language Expositions </h2> 
+        <p class = "title_p"> Snake Oil Pitch: With the advent of smart LLMs that can understand natural language, there should be no need to 
+            hunt through you photo banks. Gone are the days of trying to search though your massive photo database 
+            using only vague memory pointers of where the image should be. Instead search with natural language 
+            through your own photos. Find the photo of that wifi password written down on a business card within seconds 
+            of just describing it. Goodbye to guessing where that photo is.
+
+            
+        </p>
+        <p>
+            Computer Scientist's Pitch: We seek to create a recommender system for personal photos similar to what a Google 
+            search returns when searches and looks at images. However, the image search should be more natural and context driven, 
+            on a personal image set, and is based more on image intepretation, rather than "best match for others" based. 
+        
+        </p>
+        <p>Cryptographer's Pitch: Alice and Bob are sharing photos through an ecrypted medium. Agents' memory is not shared. 
+            Help Alice and Bob search each other's images without having to individually look at each of them. JK
+        </p>
+    </div>
+
+    <!-- MAIN BODY-->
+    <main class="main">
+        <!--Main body, website takes up about 80 percent of the browser. -->
+        
+    
+
+
+        
+    </main>
+
+    <div id="footer-container"></div>
+</body>
+</html>

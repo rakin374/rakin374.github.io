@@ -12,6 +12,13 @@ body {
     padding: 50px 10%;
 }
 
+p {
+    
+    font-family: "Big Caslon", serif;
+    font-weight: normal;
+    font-size: 2.3vh;
+}
+
 
 h1 {
     font-family: sans-serif;
@@ -56,7 +63,6 @@ h6{
 .main {
     font-size: 25px;
     font-weight: normal;
-    
     text-align: left;
     font-family: sans-serif;
 }
@@ -99,10 +105,10 @@ h6{
     flex-direction: column;
 }
 
-    .mc-spacer {
-        flex-grow: 1;
-        max-width: 20%;
-    }
+.mc-spacer {
+    flex-grow: 1;
+    max-width: 20%;
+}
 
 .ticker-container {
     max-height: 30px;
@@ -116,4 +122,31 @@ h6{
     margin-bottom: 20px;
     text-align: left;
     font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 10%;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+}
+
+.header .name {
+    font-size: 20px;
+    
+}
+
+.header a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px; /* Adjust as needed */
+    font-size: 14px;
+        
+}
+
+.header a:hover {
+    text-decoration: underline;
 }

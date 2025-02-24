@@ -8,115 +8,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="Scripts/scripts.js"></script>
-	<style>
-		body {
-			background-color: #fff;
-			color: #000;
-			font-family: 'Barlow', sans-serif;
-			margin: 0;
-		}
+	<link rel="stylesheet" href="/Styles/styles_f.css">
 
-		
-		.main {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 50px 10%;
-		}
-		
-		h1{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 25px;
-			}
-
-            h2{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 5vh;
-			}
-
-			h3 {
-				font-size: 18px;
-				font-weight: normal;
-				text-align: left;
-                font-family: sans-serif;
-			}
-            h4 {
-				font-size: 15px;
-				font-weight: normal;
-				text-align: left;
-                font-family: sans-serif;
-			}
-
-		
-
-        .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.gallery-item {
-  position: relative;
-  width: 30%;
-  margin-bottom: 20px;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.gallery-item .description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  font-size: 18px;
-  text-align: center;
-}
-
-
-.gallery-item:hover .overlay {
-  opacity: 1;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.gallery-item:hover .description {
-  transform: translateY(0);
-}
-
-</style>
 </head>
 <body>
 	<div id="header-container"></div>
 		<main class="main">
+
+
 			<div class="title-container">
 				<div class="flex vstack">
-					<h1 class="big-caslon">Fun. </h1>
-				   <h4> the more fun, more subjective stuff </h4>
+					<h1 class="big-caslon">fun </h1>
+				   <h4> some things from here and there </h4>
 				</div>
+			</div>
+
+
+
+			<div class="gallery-item">
+				<a href="FunWorks/paintings.html">
+					<img src="media/ingres_comtesse.jpg">
+					<div class="overlay"></div>
+					<div class="description">original paintings</div>
+				</a>
+			</div>
+
+
+			<div class="gallery-item">
+				<a href="FunWorks/paintings.html">
+					<img src="media/ingres_comtesse.jpg">
+					<div class="overlay"></div>
+					<div class="description">mind experiments</div>
+				</a>
 			</div>
 
 			<div class="gallery">            
@@ -124,111 +47,88 @@
 					<a href="FunWorks/adictionary.html">
 						<img src="media/turner_rain_steam_speed.jpg">
 						<div class="overlay"></div>
-						<div class="description">RM Dictionary</div>
+						<div class="description">my coded dictionary </div>
 					</a>
 				</div>
+
 				<div class="gallery-item">
-					<a href="FunWorks/fun_links.html">
+					<a href="FunWorks/tensor_chess.html">
 						<img src="media/turner_rain_steam_speed.jpg">
 						<div class="overlay"></div>
-						<div class="description">Worthy Internet Links</div>
+						<div class="description">tensor chess</div>
 					</a>
 				</div>
+
+				<div class="gallery-item">
+					<a href="FunWorks/tensor_chess.html">
+						<img src="media/turner_rain_steam_speed.jpg">
+						<div class="overlay"></div>
+						<div class="description">horticulture index</div>
+					</a>
+				</div>
+
 				<div class="gallery-item">
 					<a href="FunWorks/paintings.html">
 						<img src="media/ingres_comtesse.jpg">
 						<div class="overlay"></div>
-						<div class="description">Paintings</div>
+						<div class="description">my favorite artworks</div>
 					</a>
 				</div>
 
-
-				
- <!-- 
-  ####
-  #### IN PROGRESS
-  ####
--->	
-<!--   			
 				<div class="gallery-item">
-					<a href="FunWorks/puzzles_index.html">
+					<a href="">
+						<img src="">
+						<div class="overlay"></div>
+						<div class="description">poetry</div>
+					</a>
+				</div>
+
+				<div class="gallery-item">
+					<a href="FunWorks/paintings.html">
+						<img src="media/ingres_comtesse.jpg">
+						<div class="overlay">I worked on some culinary probs</div>
+						<div class="description">culinary index</div>
+					</a>
+				</div>
+				<div class="gallery-item">
+					<a href="">
 						<img src="media/ingres_comtesse.jpg">
 						<div class="overlay"></div>
-						<div class="description">Puzzles!</div>
+						<div class="description">orgami</div>
 					</a>
 				</div>
 				<div class="gallery-item">
-					<a href="FunWorks/html">
+					<a href="">
 						<img src="media/ingres_comtesse.jpg">
 						<div class="overlay"></div>
-						<div class="description">Magical Musical</div>
-					</a>
-				</div>
-
-				<div class="gallery-item">
-					<a href="FunWorks/html">
-						<img src="media/ingres_comtesse.jpg">
-						<div class="overlay"></div>
-						<div class="description">Horticulture</div>
-					</a>
-				</div>
-
-				
-				<div class="gallery-item">
-					<a href="FunWorks/html">
-						<img src="/Media/ingres_comtesse.jpg">
-						<div class="overlay"></div>
-						<div class="description">NOT-ENGLISH Writings</div>
+						<div class="description">lifelore</div>
 					</a>
 				</div>
 				
 				<div class="gallery-item">
-					<a href="FunWorks/html">
+					<a href="">
 						<img src="media/ingres_comtesse.jpg">
 						<div class="overlay"></div>
-						<div class="description">Games</div>
+						<div class="description">sportsmanship</div>
 					</a>
 				</div>
 
 				<div class="gallery-item">
-					<a href="FunWorks/html">
+					<a href="">
 						<img src="media/ingres_comtesse.jpg">
 						<div class="overlay"></div>
-						<div class="description">Beauty of Boston</div>
+						<div class="description"> my musical statistics</div>
 					</a>
 				</div>
 
 				<div class="gallery-item">
-					<a href="FunWorks/html">
+					<a href="">
 						<img src="media/ingres_comtesse.jpg">
 						<div class="overlay"></div>
-						<div class="description">UGrad Studies @ BU </div>
+						<div class="description"> cloooooooks</div>
 					</a>
 				</div>
 
-				<div class="gallery-item">
-					<a href="FunWorks/html">
-						<img src="media/ingres_comtesse.jpg">
-						<div class="overlay"></div>
-						<div class="description">Books</div>
-					</a>
-				</div> -->
-
-
- <!-- 
-  ####
-  #### IN PROGRESS END
-  ####
- -->
-			</div>
-
-
-
-			<h1> tools </h1>
-			<ul class = "articles-ul">
-				<a href = "Tools/pixelbox.html"> <h4> pixel box</h4> </a>
-			</ul>
-		</main>
 
 		
 	<div id="footer-container"></div>
