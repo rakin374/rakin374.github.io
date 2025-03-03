@@ -1,65 +1,118 @@
-@import url('styles_a.css');
-
 body {
-				background-color: #fff;
-				color: #000;
-				font-family: 'Barlow', sans-serif;
-				margin: 0;
-			}
+background-color: #fff;
+color: #000;
+font-family: "Big Caslon", serif;
+margin: 0;
+}
 
-			.main {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				padding: 50px 10%;
-			}
-			
-		
-
-			.vstack {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            text-align: center;
-			}
-
-			.image-container img {
-				max-width: 100%;
-				height: auto;
-			}
-
-			
-			.featured-section h3 {
-				font-style: italic;
-				font-weight: normal;
-				margin-top: 50px;
-				margin-bottom: 20px;
-			}
+.main {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 50px 10%;
+}
 
 
-			.featured-section p{
-				align-items: left;
-			}
+
+.vstack {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+text-align: center;
+}
+
+.image-container img {
+max-width: 100%;
+height: auto;
+}
 
 
-			#profile{
-				width:100vw;
-				height:80vh;
-				margin: 0px;
-				background:blue;
-			}
-			.center {
-				border: 5px solid;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				padding: 10px;
-				}
-			#name{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 10vh;
-			}
+.featured-section h3 {
+font-style: italic;
+font-weight: normal;
+margin-top: 50px;
+margin-bottom: 20px;
+}
 
+
+.featured-section p{
+align-items: left;
+}
+
+
+#profile{
+width:100vw;
+height:80vh;
+margin: 0px;
+background:blue;
+}
+.center {
+border: 5px solid;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 10px;
+}
+#name{
+font-family: sans-serif;
+font-weight: normal;
+font-size: 10vh;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Ensures it wraps around the image */
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Align vertically */
+    gap: 20px; /* Space between image and audio */
+	flex-direction: column;
+}
+
+
+.hstack {
+    display: flex;
+    align-items: center; /* Align vertically */
+    gap: 20px; /* Space between image and audio */
+	flex-direction: row;
+	
+}
+
+
+.spacer {
+    flex-grow: 1; /* Takes up remaining space */
+}
+
+
+.image-container:hover .overlay {
+    opacity: 1;
+    background: rgba(0, 8, 255, 0.446);
+}
+
+
+
+.overlay {
+
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background-color: rgba(222, 255, 4, 0.5);
+color: #ffffff;
+font-size: 16px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.5s;
+font-family: "Big Caslon", serif;
+
+}

@@ -1,0 +1,286 @@
+
+
+body {
+
+    display: flex;
+    flex-direction: row; /* Ensures elements are arranged in a row (horizontal) */
+    justify-content: space-between; /* Adjust alignment to spread elements */
+    align-items: flex-start; /* Align items at the top */
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background-color: #ffffff;
+    color: #000;
+    font-family: "Big Caslon", serif;
+    flex-direction: row;
+    
+
+
+
+}
+
+  
+
+header {
+    
+    color: #000000;
+    font-family: "Big Caslon", serif;
+    font-size: 7vh;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+nav{
+    background-color: #ab1414;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+main {
+    flex: 1; /* Allows it to take up available space */
+    padding: 20px;
+    
+}
+
+#price{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    font-size: 4vh;
+}
+
+#right-container {
+    width: 200px; /* Adjust as needed */
+    padding: 20px;
+}
+
+.header div:nth-child(2) {
+    flex-grow: 1; /* Makes it expand and push other elements apart */
+}
+
+a {
+    color: inherit; /* Makes all links the same color as normal text */
+    text-decoration: none; /* Optional: Removes underlining */
+}
+
+a:visited {
+    color: inherit; /* Ensures visited links do not change color */
+}
+
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10%;
+    font-family: "Big Caslon", serif;
+    
+}
+
+
+.vstack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+    
+.featured-section h3 {
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.featured-section p{
+    align-items: left;
+}
+
+
+#profile{
+        width:100vw;
+        height:80vh;
+        margin: 0px;
+        background:blue;
+}
+.center {
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+    .gallery-item {
+    position: relative;
+    width: 30%;
+    margin-bottom: 20px;
+    }
+
+    .gallery-item img {
+    display: block;
+    width: 60%;
+    height: auto;
+    }
+
+    .gallery-item .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255, 100, 33);
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    }
+
+
+    .gallery-item:hover .overlay {
+    opacity: 1;
+    background: rgba(222, 6, 255, 0.446);
+    }
+
+    .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(222, 255, 4, 0.5);
+    color: #000000;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    font-family: "Big Caslon", serif;
+    font-weight: normal;
+    }
+
+    .gallery-item:hover .description {
+    transform: translateY(0);
+    }
+    
+    /* Clock Styles */
+
+    .clock-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .hstack {
+        display: flex;
+        gap: 10px; /* Optional: Adds spacing between items */
+    }
+
+    .clock {
+        background: rgb(132, 130, 130);
+        padding: 10px;
+    }
+    .timezone {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+    
+        font-family: "Big Caslon", serif;
+        font-weight: normal;
+        font-size: 2.3vh;
+    }
+    
+    
+    h1 {
+        font-family: "Big Caslon", serif;
+        font-weight: normal;
+        font-size: 4vh;
+    }
+    
+    h2 {
+        font-family: "Big Caslon", serif;
+        font-weight: normal;
+        font-size: 3vh;
+    }
+    
+    
+    h3 {
+        font-family: "Big Caslon", serif;
+        font-weight: normal;    
+        font-size: 5vh;
+    }
+    
+    
+    h4 {
+        font-family: "Big Caslon", serif;
+        font-weight: normal;    
+        font-size: 3vh;
+    }
+
+
+    
+    h5 {
+        font-family: "Big Caslon", serif;
+        font-weight: normal;
+        font-size: 2vh;
+    }
+    #price{
+        font-size: 1.5vh;
+    }
+    
+
+
+    h6{
+    
+        font-family: "Big Caslon", serif;
+        font-weight: normal;
+        font-size: 1.5vh;
+    
+    }
+
+
+    .strat { 
+        font-family: "Big Caslon", serif;
+        font-weight: normal;
+        font-size: 2vh;
+        background-color: rgb(255, 255, 255);
+        min-width: 100%;
+    }
+    
+
+  
+
+
+    @import url('styles_a.css');
+    @import url('styles_i.css')
+
+
+
+
