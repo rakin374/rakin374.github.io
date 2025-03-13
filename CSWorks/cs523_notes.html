@@ -1,147 +1,143 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Some Project</title>
+	<head>
+        <meta charset="UTF-8">
+		<title>Rakin Munim</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="/Styles/styles_a.css">
+		<script src="/Scripts/scripts.js"></script>
 
-<!--  STYLE AND SCRIPTING STUFF-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="/scripts.js"></script>
-<!--  STYLE AND SCRIPTING STUFF-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-python.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+        <style>
+         /* Import a strong and rigorous font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
-<style>
-	body {
-        background-color: #fff;
-        color: #000;
-        font-family: 'Barlow', sans-serif;
-        margin: 0;
-        align-items: center;
-      
-    }
+/* General Code Block Styling */
+pre[class*="language-"], code[class*="language-"] {
+    font-family: "IBM Plex Mono", "Fira Code", monospace; /* Intellectual, precise */
+    font-size: 12px;  /* Slightly larger for clarity */
+    line-height: 1;  /* Better spacing for reading */
+    color: #d1d5db; /* Soft, serious white */
+    background: #101419; /* Dark, academic background */
+    border-radius: 6px;
+    padding: 12px 18px; /* Well-balanced padding */
+    margin: 0;
+    overflow: auto;
+}
 
-    .title{
-        font-size: 30px;
-		font-weight: normal;
-		margin-bottom: 20px;
-		text-align: left;
-    }
-    
-    .title_div{
-      padding-left: 10%;
-      padding-right: 10%;
-    }
+/* Terminal Styling */
+pre[class*="language-bash"] {
+    background: #0d1117;  /* Professional dark theme */
+    color: #c9d1d9;  /* Light but not harsh */
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-weight: 500;
+    position: relative;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Elegant shadow */
+}
 
-    .title_p{
-        font-size: 19px;
-    }
-    
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        padding-left: 10%;
-        padding-right : 10%;
-        padding-bottom: 200px;
-    }
-		
-	.main h2{
-        font-size: 25px;
-        font-weight: normal;
-        margin-bottom: 20px;
-        text-align: left;
-        text-decoration: underline;
-	}
-		
-    .main ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-    }
-    .main li {
-        margin-bottom: 40px;
-        text-align: left;
-        max-width: 600px;
-      
-    }
-    .main a {
-        color: #000;
-        text-decoration: none;
-        font-weight: normal;
-        font-size: 24px;
-        border-bottom: 1px solid transparent;
-        transition: border-bottom-color 0.2s ease-in-out;
-    }
-    .main a:hover {
-        border-bottom-color: #000;
-    }
-    .main p {
-        font-size: 18px;
-        line-height: 1.5;
-        margin-top: 10px;
-    }
+/* Terminal Fake Prompt */
+pre[class*="language-bash"]::before {
+    content: "$ "; /* Fake Bash prompt */
+    color: #6aa84f; /* Elegant green */
+    font-weight: bold;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        font-size: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-        
-</style>
-</head>
+/* Left Alignment Fix */
+pre[class*="language-bash"] code {
+    padding-left: 24px !important; /* Align text neatly */
+    display: block;
+}
 
 
+/* Syntax Highlighting (Rigorous & High Contrast) */
+.token.keyword { color: #d55fde; font-weight: 600; } /* Distinct purple */
+.token.string { color: #9ece6a; } /* Strong, confident green */
+.token.comment { color: #6b7280; font-style: italic; } /* Muted, thoughtful */
+.token.function { color: #67b0ff; } /* Clean, intellectual blue */
+.token.operator { color: #f7768e; } /* Deep, bold red */
+.token.number { color: #e0af68; } /* Golden logic */
+.token.variable { color: #ff9e64; } /* Sharp, warm orange */
+        </style>
+    </head>
 
 <body>
     <div id="header-container"></div>
-    <!-- TITLE DIV-->
-    <div class = title_div > 
-        <h2 class = "title">IMACLE- Intelligent MApping of Camera and Language Expositions </h2> 
-        <p class = "title_p"> Snake Oil Pitch: With the advent of smart LLMs that can understand natural language, there should be no need to 
-            hunt through you photo banks. Gone are the days of trying to search though your massive photo database 
-            using only vague memory pointers of where the image should be. Instead search with natural language 
-            through your own photos. Find the photo of that wifi password written down on a business card within seconds 
-            of just describing it. Goodbye to guessing where that photo is.
-
-            
-        </p>
-        <p>
-            Computer Scientist's Pitch: We seek to create a recommender system for personal photos similar to what a Google 
-            search returns when searches and looks at images. However, the image search should be more natural and context driven, 
-            on a personal image set, and is based more on image intepretation, rather than "best match for others" based. 
-        
-        </p>
-        <p>Cryptographer's Pitch: Alice and Bob are sharing photos through an ecrypted medium. Agents' memory is not shared. 
-            Help Alice and Bob search each other's images without having to individually look at each of them. JK
-        </p>
-    </div>
-
-    <!-- MAIN BODY-->
     <main class="main">
-        <!--Main body, website takes up about 80 percent of the browser. -->
-        
-    
+        <div class = "matter-container">
+            <h4>some notes on mathematics and cs</h4>
+            <h5>Questions/Topics</h5>
+            <h6>
+                <br>
+                - Formal Systems. 
+                <br> 
+
+            </h6>
 
 
-        
-    </main>
+            <h5>Formal Mathematical Systems</h5>
+            <ul>
+                <li> <a href = "https://leanprover-community.github.io/install/project.html">Lean 4 Documentation</a></li>
+                <li> <a href = "https://lean.math.hhu.de/">Lean 4 Live</a></li>
+                <li><a href = "https://pypi.org/project/lean4-jupyter/"> Lean 4 Jupyter: </a></li>
+            </ul>
+            <h6>
+                Building intelligence systems requires us formalize ideas and make it understandable at 
+                the hardware level. Proofs on paper are not a way to do this. Hence we use formal systems 
+                like Coq, Lean, etc. 
+                <br> 
+                <br>
+                I will be using Lean for my experiments. Attached are some notes.
+                <p>
+                    ChatGPT said ```"Lean is based on depenednt type theory meaning propositions are types and proofs are values."```
+                    We can now think of this in the content of basic number thoery. Numbers likes 1, 2, 3, ... are proofs. 
+                    Propositions are the defintions. E.g. &naturals; is the compreseed representation of the proposition. It is the 
+                    Q: What is the formal proposition of the natural numbers?
+                </p
 
+
+            </h6>
+                <pre>
+                    <code class="language-bash">
+                        # useful code for adding lean to path incase it gets lost in the futures
+                        echo 'export PATH="/Users/rakin/Projects/Lean/repl/.lake/build/bin:$PATH"' >> ~/.zshrc
+                        source ~/.zshrc
+                    </code>
+                </pre>
+
+                <br>
+                
+
+            <pre><code class="language-bash">
+                # Check your Lean version
+                lean --version
+                
+                # Add Lean's bin directory to PATH (for Bash)
+                echo 'export PATH="$HOME/.elan/bin:$PATH"' >> ~/.bashrc
+                source ~/.bashrc
+                
+                # Check if Lean is globally accessible
+                which lean
+                </code></pre>
+
+                
+
+
+
+        </div>
+	</main>
     <div id="footer-container"></div>
 </body>
+
+
 </html>
