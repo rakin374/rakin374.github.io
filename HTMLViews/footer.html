@@ -2,36 +2,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0; /* Reset default body margin */
-            font-family: 'Barlow', sans-serif;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Footer Example</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+	<style>
+		.footer {
+			margin: 0;
+			font-family: 'Roboto', sans-serif;
+		}
 
 		.footer {
 			display: flex;
+			justify-content: space-between;
 			align-items: center;
-			justify-content: center;
+			padding: 10px 20px;
 			height: 60px;
-			color: #000;
-			font-size: 18px;
-			letter-spacing: 2px;
+			color: #555;
+			font-size: 14px;
 			border-top: 1px solid #000;
-			}
+			background-color: #f9f9f9;
+		}
 
 		.footer a {
-			margin-right: 10px;
-			color: black;
+			color: #007BFF;
+			text-decoration: none;
+			font-weight: bold;
 		}
-    </style>
+
+		.footer a:hover {
+			text-decoration: underline;
+		}
+	</style>
 </head>
 <body>
-    <footer class="footer">
+	<footer class="footer">
+		<div>
+			This page was created with the assistance of generative models such as 
+			<a href="https://openai.com/index/gpt-4/">GPT</a>.
+		</div>
+		<div id="nyc-clock">EST: </div>
 		
-      </footer>
+	</footer>
+	<script>
+		function updateNYCClock() {
+			const options = { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+			const nycTime = new Intl.DateTimeFormat('en-US', options).format(new Date());
+			document.getElementById('nyc-clock').textContent = `EST: ${nycTime}`;
+		}
+		setInterval(updateNYCClock, 1000);
+		updateNYCClock();
+	</script>
 </body>
 </html>
