@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title>Rakin Munim</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="/Styles/styles_a.css">
+		<script src="/Scripts/scripts.js"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-python.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+        <style>
+         /* Import a strong and rigorous font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+/* General Code Block Styling */
+pre[class*="language-"], code[class*="language-"] {
+    font-family: "IBM Plex Mono", "Fira Code", monospace; /* Intellectual, precise */
+    font-size: 12px;  /* Slightly larger for clarity */
+    line-height: 1;  /* Better spacing for reading */
+    color: #d1d5db; /* Soft, serious white */
+    background: #101419; /* Dark, academic background */
+    border-radius: 6px;
+    padding: 12px 18px; /* Well-balanced padding */
+    margin: 0;
+    overflow: auto;
+}
+
+/* Terminal Styling */
+pre[class*="language-bash"] {
+    background: #0d1117;  /* Professional dark theme */
+    color: #c9d1d9;  /* Light but not harsh */
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-weight: 500;
+    position: relative;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Elegant shadow */
+}
+
+/* Terminal Fake Prompt */
+pre[class*="language-bash"]::before {
+    content: "$ "; /* Fake Bash prompt */
+    color: #6aa84f; /* Elegant green */
+    font-weight: bold;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+/* Left Alignment Fix */
+pre[class*="language-bash"] code {
+    padding-left: 24px !important; /* Align text neatly */
+    display: block;
+}
+
+
+/* Syntax Highlighting (Rigorous & High Contrast) */
+.token.keyword { color: #d55fde; font-weight: 600; } /* Distinct purple */
+.token.string { color: #9ece6a; } /* Strong, confident green */
+.token.comment { color: #6b7280; font-style: italic; } /* Muted, thoughtful */
+.token.function { color: #67b0ff; } /* Clean, intellectual blue */
+.token.operator { color: #f7768e; } /* Deep, bold red */
+.token.number { color: #e0af68; } /* Golden logic */
+.token.variable { color: #ff9e64; } /* Sharp, warm orange */
+        </style>
+    </head>
+
+<body>
+    <div id="header-container"></div>
+    <main class="main">
+        <div class = "matter-container">
+            <h4>some notes on mathematics and cs</h4>
+            <h5>Questions/Topics</h5>
+            <h6>
+                <br>
+                - Formal Systems. 
+                <br> 
+
+            </h6>
+
+
+            <h5>Formal Mathematical Systems</h5>
+            <ul>
+                <li> <a href = "https://leanprover-community.github.io/install/project.html">Lean 4 Documentation</a></li>
+                <li> <a href = "https://lean.math.hhu.de/">Lean 4 Live</a></li>
+                <li><a href = "https://pypi.org/project/lean4-jupyter/"> Lean 4 Jupyter: </a></li>
+            </ul>
+            <h6>
+                Building intelligence systems requires us formalize ideas and make it understandable at 
+                the hardware level. Proofs on paper are not a way to do this. Hence we use formal systems 
+                like Coq, Lean, etc. 
+                <br> 
+                <br>
+                I will be using Lean for my experiments. Attached are some notes.
+                <p>
+                    ChatGPT said ```"Lean is based on depenednt type theory meaning propositions are types and proofs are values."```
+                    We can now think of this in the content of basic number thoery. Numbers likes 1, 2, 3, ... are proofs. 
+                    Propositions are the defintions. E.g. &naturals; is the compreseed representation of the proposition. It is the 
+                    Q: What is the formal proposition of the natural numbers?
+                </p
+
+
+            </h6>
+                <pre>
+                    <code class="language-bash">
+                        # useful code for adding lean to path incase it gets lost in the futures
+                        echo 'export PATH="/Users/rakin/Projects/Lean/repl/.lake/build/bin:$PATH"' >> ~/.zshrc
+                        source ~/.zshrc
+                    </code>
+                </pre>
+
+                <br>
+                
+
+            <pre><code class="language-bash">
+                # Check your Lean version
+                lean --version
+                
+                # Add Lean's bin directory to PATH (for Bash)
+                echo 'export PATH="$HOME/.elan/bin:$PATH"' >> ~/.bashrc
+                source ~/.bashrc
+                
+                # Check if Lean is globally accessible
+                which lean
+                </code></pre>
+
+                
+
+
+
+        </div>
+	</main>
+    <div id="footer-container"></div>
+</body>
+
+
+</html>

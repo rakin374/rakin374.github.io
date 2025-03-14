@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <title>Window Dimensions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/prims.css">
+    <link rel="stylesheet" href="/Arx/styles/styles_arx.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { width: 70vw; height: 20vh; display: block; }
+    </style>
+
+</head>
+<body>
+    
+    <div id="dimensions">
+        <div class="vstack">
+            <h3 id = "dimensions2"></h3>
+            <h3> 2100×1100⍣</h3>
+        </div>
+    </div>
+
+    <div class = "vstack">
+        <canvas id="renderCanvas"></canvas>
+       
+        <div class = "hstack">
+            <div>
+                <h1>mini-marcel, rakin munim, sheet index</h1>
+                <h2>Location, access points, utilities</h2>
+                <h3> Room layout, doors, walls, dimensions</h3>
+                <h4>Exterior views of the building</h4>
+                <h5> Vertical cuts through the building</h5>
+                <h6>Financials</h6>
+    
+                <h4 class="special">This is Axiforma</h4>
+                <h5 class="special">This is ITC Avant Garde Gothic</h5>
+                <h6 class="special">This is Tungsten</h6>
+           </div>
+            <div class="spacer"></div>
+        </div>
+        
+    </div>
+
+
+
+</body>
+
+<script>
+    function updateWindowDimensions() {
+        document.getElementById('dimensions2').textContent = 
+            `${window.innerWidth}×${window.innerHeight}⍣`;
+    }
+
+    // Initial update
+    updateWindowDimensions();
+    // Update on resize
+    window.addEventListener('resize', updateWindowDimensions);
+</script>
+
+<script>
+    // Get canvas and create engine
+    const canvas = document.getElementById("renderCanvas");
+    const engine = new BABYLON.Engine(canvas, true);
+
+    // Create a scene
+    const scene = new BABYLON.Scene(engine);
+
+    // Create a camera
+    const camera = new BABYLON.ArcRotateCamera("camera", Math.PI / 4, Math.PI / 4, 5, BABYLON.Vector3.Zero(), scene);
+    camera.attachControl(canvas, true); // Allows user interaction
+
+    // Create a light
+    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0), scene);
+    light.intensity = 0.7;
+
+    // Create a 3D Cube
+    const box = BABYLON.MeshBuilder.CreateBox("box", { size: 1 }, scene);
+
+    // Create a material for the cube
+    const material = new BABYLON.StandardMaterial("boxMaterial", scene);
+    material.diffuseColor = new BABYLON.Color3(0.2, 0.6, 1); // Light Blue
+    box.material = material;
+
+    // Animate the cube
+    engine.runRenderLoop(() => {
+        box.rotation.y += 0.01;
+        box.rotation.x += 0.005;
+        scene.render();
+    });
+
+    // Handle window resizing
+    window.addEventListener("resize", () => engine.resize());
+</script>
+</html>
