@@ -1,43 +1,87 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Rakin Munim</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-		<script src="Scripts/scripts.js"></script>
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="../Styles/styles_i.css">
+		<script src="/Scripts/scripts.js"></script>
+        
+        <!-- imports -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+           
 	</head>
     <body>
-        
+        <div id="header-container"></div> 
         <main class="main">
-            <div class="title-container">
+                <div class = "hstack">
                 <div class="flex vstack">
-                    <h2> THIS PAGE IS CURRENTLY IN DEVELOPMENT. </h2>
-                    <h1 class="big-caslon">Eüclidia</h1>
-                    <h4> see together  </h4>
+                    <p> interface </p>
+                    <h2> IN DEVELOPMENT </h2>
+                    <h4 >euclidia</h4>
+                </div>
+                <div class="spacer"></div>
+                <div class="image-container">
+                    <a>
+                        <img src="/Media/berk/sample.png" alt="Image">
+                        <div class="overlay">an image taken with euclidia</div>
+                    </a>
                 </div>
             </div>
-        
             <div class = "matter-container">
-                <h3> Introduction </h3>
-                Eüclidia is an virtual reality application I developed over a course of a few months in 2023. It gave me a bit of hope and challenge. 
-                I built the software with the goal of making it easy for multiple people to cowork in their space. I developed the application 
-                using Apple's VR software frameworks. The app was built for Apple hardware. I implemented various basic features, but never got to the end of 
-                it since eventually writing software alone gets boring. In the age of generative software, I presume it should be easy to take the base 
-                source code and modifiy it to fill the requirements I initally was after. 
-                and 
-                <h3> Motivation </h3>
-
-                <h3> Current Architecture </h3>
-                <h3> Limitations </h3>
-                <h3> Future Paths </h3>
-
-                <h3> Feature Demos </h3>
-                
-            </div>
+                <div class = "intro">
+                    <h5>Introduction</h5>
+                    <br>
+                    <p> Eüclidia is an vr app in 2023. It gave me a bit of hope and challenge. 
+                        I built the software with the goal of making it easy for multiple people to cowork in their space. I developed the application 
+                        using Apple's VR software frameworks. The app was built for Apple hardware. I implemented various basic features, but never got to the end of 
+                        it since eventually writing software alone gets boring. In the age of generative software, I presume it should be easy to take the base 
+                        source code and modifiy it to fill the requirements I initally was after. 
+                    </p>
+                    <ul>
+                        <li><a href="#synthetic_brain">Overview + Features</a></li>
+                        <li><a href="#interface">Interface</a></li>
+                        <li><a href="#knowledge_bases">Progress</a></li>
+                        <li><a href="#functions">Mathematics</a></li>
+                        <li><a href="#functions">Open Problems</a></li>
+                    </ul>
+                </div>  
+                <br>
+                <!-- Live Knowledge -->
+                <div class="sections-container">
+                    <!-- Section 1: Synthetic Brain -->
+                    <section class="section" id="overview">
+                        <h2>human brains & synthetic brains</h2>
+                        <h3>A natural place to start: what is the human brain? A massive structure of neurons? 
+                        </h3>
+                    </section>
+                    <!-- Section 2: Functions, Purposes, and Value -->
+                    <section class="section">
+                        <h2>goals and features</h2>
+                        <h3>single person</h3>
+                        
+                        <h3>multiperson</h3>
+                    </section>
+                    <!-- Section 3: Arx -->
+                    <section class="section" id = "knowledge_bases">
+                        <h2>representations & data</h2>
+                        <h3>file systems</h3>
+                        <ul>
+                            <li> OpenUSD+  </li>
+                            <li> JSON-Encoding </li>
+                            <li> meshs</li>
+                            <li> point clouds</li>
+                        </ul>
+                    </section>
+                </div>
         </main>
+        <div id="footer-container"></div>
     </body>
 </html>
+
