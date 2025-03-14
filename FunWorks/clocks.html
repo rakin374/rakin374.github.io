@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rakin Munim</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<script src="/Scripts/scripts.js"></script>
+	</head>
+    <body>
+        <div id="header-container"></div>
+        <main class="main">
+            <div class="title-container">
+                <div class="flex vstack">
+                    <h2>clocks you should be looking at</h2>
+                    <h6> inspired by the usdebt clock </h6>
+                </div>
+            </div>
+        <div class="clocks-container">
+            <div class="clock">
+                <h3>World Population</h3>
+                <p id="world-population">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>US National Debt</h3>
+                <p id="us-debt">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>Time Since New Year</h3>
+                <p id="time-new-year">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>Earth Orbits Around Sun</h3>
+                <p id="earth-orbits">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>Births Today</h3>
+                <p id="births-today">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>Deaths Today</h3>
+                <p id="deaths-today">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>CO2 Emissions This Year</h3>
+                <p id="co2-emissions">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>Deforestation This Year</h3>
+                <p id="deforestation">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>Internet Users Worldwide</h3>
+                <p id="internet-users">Loading...</p>
+            </div>
+            <div class="clock">
+                <h3>Time Spent on Social Media</h3>
+                <p id="social-media-time">Loading...</p>
+            </div>
+        </div>
+
+        <script>
+            function updateClocks() {
+                document.getElementById('world-population').textContent = (8000000000 + Math.floor(Math.random() * 1000)).toLocaleString();
+                document.getElementById('us-debt').textContent = `$${(31000000000000 + Math.random() * 100000000).toFixed(2)}`;
+                document.getElementById('time-new-year').textContent = `${Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 1)) / 1000)} seconds`;
+                document.getElementById('earth-orbits').textContent = `${(Date.now() / 31557600000).toFixed(6)} orbits`;
+                document.getElementById('births-today').textContent = Math.floor(Math.random() * 300000).toLocaleString();
+                document.getElementById('deaths-today').textContent = Math.floor(Math.random() * 150000).toLocaleString();
+                document.getElementById('co2-emissions').textContent = `${(Math.random() * 1000000000).toFixed(2)} tons`;
+                document.getElementById('deforestation').textContent = `${Math.floor(Math.random() * 1000000).toLocaleString()} hectares`;
+                document.getElementById('internet-users').textContent = `${Math.floor(Math.random() * 5000000000).toLocaleString()} users`;
+                document.getElementById('social-media-time').textContent = `${Math.floor(Math.random() * 1000000000).toLocaleString()} hours`;
+            }
+
+            setInterval(updateClocks, 1000);
+            updateClocks();
+        </script>
+           
+        </main>
+        <div id="footer-container"></div>
+    </body>
+</html>
