@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 		<script src="/Scripts/scripts.js"></script>
+        <link rel="stylesheet" href="/Styles/styles_clock.css">
 	</head>
     <body>
         <div id="header-container"></div>
@@ -15,54 +16,22 @@
             <div class="title-container">
                 <div class="flex vstack">
                     <h2>clocks you should be looking at</h2>
-                    <h6> inspired by the usdebt clock </h6>
+                    <h6> inspired by the <a href="https://www.usdebtclock.org/" target="_blank">usdebt clock</a> </h6>
                 </div>
             </div>
-        <div class="clocks-container">
-            <div class="clock">
-                <h3>World Population</h3>
-                <p id="world-population">Loading...</p>
+            
+           
+            <div class="clocks-container" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
             </div>
-            <div class="clock">
-                <h3>US National Debt</h3>
-                <p id="us-debt">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>Time Since New Year</h3>
-                <p id="time-new-year">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>Earth Orbits Around Sun</h3>
-                <p id="earth-orbits">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>Births Today</h3>
-                <p id="births-today">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>Deaths Today</h3>
-                <p id="deaths-today">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>CO2 Emissions This Year</h3>
-                <p id="co2-emissions">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>Deforestation This Year</h3>
-                <p id="deforestation">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>Internet Users Worldwide</h3>
-                <p id="internet-users">Loading...</p>
-            </div>
-            <div class="clock">
-                <h3>Time Spent on Social Media</h3>
-                <p id="social-media-time">Loading...</p>
-            </div>
+
+          
         </div>
 
+        <script src="/Scripts/clocks.js"></script>
         <script>
+            
             function updateClocks() {
+                document.getElementById('test_clock').textContent = getCurrentTime();
                 document.getElementById('world-population').textContent = (8000000000 + Math.floor(Math.random() * 1000)).toLocaleString();
                 document.getElementById('us-debt').textContent = `$${(31000000000000 + Math.random() * 100000000).toFixed(2)}`;
                 document.getElementById('time-new-year').textContent = `${Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 1)) / 1000)} seconds`;
@@ -75,6 +44,51 @@
                 document.getElementById('social-media-time').textContent = `${Math.floor(Math.random() * 1000000000).toLocaleString()} hours`;
             }
 
+
+            const cityTimes = pentaclocks(); // grab the pentaclocks
+            console.log(cityTimes);
+
+            const clocksContainer = document.querySelector('.clocks-container');
+
+            cityTimes.forEach(city => {
+                const clockDiv = document.createElement('div');
+                clockDiv.className = 'clock-view';
+                clockDiv.style.border = '1px solid #ccc';
+                clockDiv.style.padding = '10px';
+                clockDiv.style.textAlign = 'center';
+                clockDiv.style.borderRadius = '5px';
+                clockDiv.style.backgroundColor = '#f9f9f9';
+
+                const cityName = document.createElement('h3');
+                cityName.textContent = city.name;
+                cityName.style.marginBottom = '10px';
+
+                const cityTime = document.createElement('p');
+                cityTime.id = `clock-${city.name.toLowerCase().replace(/\s+/g, '-')}`;
+                cityTime.textContent = city.time;
+
+                clockDiv.appendChild(cityName);
+                clockDiv.appendChild(cityTime);
+                clocksContainer.appendChild(clockDiv);
+            });
+
+            // Update each city's clock dynamically
+            function updateCityClocks() {
+                cityTimes.forEach(city => {
+                    const cityTimeElement = document.getElementById(`clock-${city.name.toLowerCase().replace(/\s+/g, '-')}`);
+                    if (cityTimeElement) {
+                        cityTimeElement.textContent = getCurrentTime(city.timezone); // Assuming getCurrentTime supports timezones
+                    }
+                });
+            }
+
+            setInterval(updateCityClocks, 1000);
+            updateCityClocks();
+
+
+ 
+            // Example: Splicing the first two cities for a view
+            const viewTimes = cityTimes.slice(0, 2);
             setInterval(updateClocks, 1000);
             updateClocks();
         </script>
