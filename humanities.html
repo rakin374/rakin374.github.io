@@ -6,180 +6,186 @@
 		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-		
-		<script src="Scripts/scripts.js"></script>
-		<style>
-			body {
-				
-				color: #000;
-				font-family:  sans-serif;
-				margin: 0;
-			}
-			
-			.main {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				padding: 50px ;
-                padding-top: 10px;
-                padding-bottom: 10px;
-			}
-            .articles-ul a{
-                font-family: sans-serif;
-				font-weight: normal;
-				font-size: 24px;
-                text-decoration: none;
-                color: darkslateblue
-            }
-			
-			h1{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 25px;
-			}
-
-            h2{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 5vh;
-			}
-
-			h3 {
-				font-size: 18px;
-				font-weight: normal;
-				text-align: left;
-                font-family: sans-serif;
-			}
-            h4 {
-				font-size: 15px;
-				font-weight: normal;
-				text-align: left;
-                font-family: sans-serif;
-			}
-
-			.center {
-				border: 5px solid;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				padding: 10px;
-				}
-
-            .title-container {
-                display: flex;
-                flex-direction: row;
-                margin: 10px;
-            }
-
-            .title {
-                flex-shrink: 0;
-                white-space: nowrap; /* Prevent wrapping if necessary */
-            }
-
-            .matter-container {
-                display: flex;
-                width: 100%;
-                flex-direction: column;
-                margin-top: 20px; /* Add margin to create space */
-                margin-bottom: 20px; /* Add margin to create space */
-            }
-
-
-            .articles-ul{
-                font-size: 25px;
-				font-weight: normal;
-				margin-bottom: 20px;
-				text-align: left;
-                font-family: sans-serif;
-            }
-
-			
-
-			.image-container {
-			position: relative;
-			max-width: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			}
-
-			.featured-section p{
-				align-items: left;
-			}
-
-			.image-attribution {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			background-color: rgba(255, 255, 255, 0.8); /* add a semi-transparent background to the text for readability */
-			padding: 10px;
-			text-align: center;
-			font-size: 14px;
-			}
-
-			#profile{
-				width:100vw;
-				height:80vh;
-				margin: 0px;
-				background:blue;
-			}
-			.center {
-				border: 5px solid;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				padding: 10px;
-				}
-			#name{
-				font-family: sans-serif;
-				font-weight: normal;
-				font-size: 10vh;
-			}
-
-
-
-           
-            
-
-
-
-		</style>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>		
+		<link rel="stylesheet" href="/Arx/styles/prims.css"/>
+		<script src="/Scripts/scripts.js"></script>
 	</head>
+
     <body>
         <div id="header-container"></div>
         <main class="main">
             <div class="title-container">
                 <div class="flex vstack">
-                    <h1 class="big-caslon">Humanities</h1>
-                <h4> art history, music, philosophy, etc </h4>
+                    <h1 class="big-caslon">humanities</h1>
+                <h4> the works of nobility: art history, music, philosophy, etc </h4>
                 </div>
             </div>
+			<br>         
+			<div class="image-container">
+				<a href="https://commons.wikimedia.org/wiki/File:Sc%C3%A8ne_des_massacres_de_Scio,_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_;_C3.jpg#/media/File:Sc%C3%A8ne_des_massacres_de_Scio,_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_;_C3.jpg">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Sc%C3%A8ne_des_massacres_de_Scio%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_%3B_C3.jpg" alt="Scène des massacres de Scio, Eugène Delacroix - Musée du Louvre Peintures INV 3823 ; C3.jpg",  style="max-width: 100%"></a>
+				<div class="image-attribution">
+					The Massacre at Chios. a painting not far away from reality today. 
+					
+				</div>
+			</div>     
 
-            
-               
-                <br>
-                 
-                <div class="image-container">
-                    <a href="https://commons.wikimedia.org/wiki/File:Sc%C3%A8ne_des_massacres_de_Scio,_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_;_C3.jpg#/media/File:Sc%C3%A8ne_des_massacres_de_Scio,_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_;_C3.jpg">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Sc%C3%A8ne_des_massacres_de_Scio%2C_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_%3B_C3.jpg" alt="Scène des massacres de Scio, Eugène Delacroix - Musée du Louvre Peintures INV 3823 ; C3.jpg",  style="max-width: 100%"></a>
-                    <div class="image-attribution">
-                        The Massacre at Chios 
-                    </div>
-                </div>     
-        
-            <div class = "matter-container">
-               
-                <h3> Articles </h3>
-                    <ul class = "articles-ul">
-						<a> <h4> What is the future for the people of ###### ? </h4> </a>
-                        <a> <h4> * Romanticism and Baroque Arts BU </h4> </a>
-                        <a> <h4> * The Sisyphus Story  </h4> </a>
-                    </ul>
-            </div>
+			<div> 
+				<h2>
+					Patriots MIA Docket (38K::active combat, 80K :: total on patrol)
+
+				</h2>
+				
+				<h3><a href="https://en.wikipedia.org/wiki/1982_Lebanon_War">Accountancy of patriots the 1982 Lebanon War</a></h3>
+
+						<h3>
+
+						</h3>
+						<!-- to serve today's justice one must first serve yesterdays. After they must serve their own. Only then are they allowed... -->
+						<p> Peacekeeping operations gone wrong. 200+ peacekeeper killed in attacks that an unkown entity. </p>
+				<div class = "hstack">
+
+					<table border="1">
+						<thead>
+							<tr>
+								<th>x </th>
+								<th>y</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Locations</td>
+								<td>
+									<ul>
+										<li>MIA
+											<ul>
+												<li>Region 1</li>
+												<li>Region 2</li>
+												<li>Region 3</li>
+											</ul>
+										</li>
+										<li>KIA
+											<ul>
+												<li>Region A</li>
+												<li>Region B</li>
+												<li>Region C</li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>StartDate</td> <td>mm;;dd;;yyyy</td>
+							</tr>
+							<tr>
+								<td>EndDate</td> <td>mm;;dd;;yyyy</td>
+							</tr>
+							<tr>
+								<td>Key Witness</td> <td>x</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table border="1">
+						<thead>
+							<tr>
+								<th>x </th>
+								<th>y</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Locations</td><td>MIA</td>
+							</tr>
+							<tr>
+								<td>StartDate</td> <td>KIA</td>
+							</tr>
+							<tr>
+								<td>EndDate</td> <td>KIA</td>
+							</tr>
+							<tr>
+								<td>Key Witness</td> <td>x</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					
+				</div>
+
+				<br>
+				<br>
+				
+				<table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+					<thead>
+						<tr>
+							<th>x</th>
+							<th>y</th>
+							<th>z</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>THE PATRIOTS LIST</td>
+							<td></td>
+							<td>Identifiers</td>
+						</tr>
+						<tr>
+							<td>PERSONELL</td>
+							<td></td>
+							<td>Number of active-duty military personnel.</td>
+						</tr>
+						<tr>
+							<td>US COURT JURISDICTION</td>
+							<td></td>
+							<td>Number of active-duty military personnel.</td>
+						</tr>
+						<tr>
+							<td>COMBAT MISSIONS</td>
+							<td></td>
+							<td>An index of all combat missions</td>
+						</tr>
+						<tr>
+							<td>CAUSALTIES</td>
+							<td></td>
+							<td>A full KB of casualty reports.</td>
+						</tr>
+						<tr>
+							<td>LANGUAGE CORPA</td>
+							<td></td>
+							<td>a list of any judicial proceedings connected to this conflict & occurs within our borders/territories<br>
+							phsyical and metaphysical(uspace).</td>
+						</tr>
+
+						
+						<tr>
+							<td>DOMESTIC COURT PROCEEDINGS</td>
+							<td></td>
+							<td>a list of any judicial proceedings connected to this conflict outside of our current uspace.</td>
+						</tr>
+
+						<tr>
+							<td>CRIMES INDEX</td>
+							<td></td>
+							<td>war<br></td>
+						</tr>
+
+						<tr>
+							<td>WARRANTS</td>
+							<td></td>
+							<td>war<br></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				
+			</div>
+
+
+
+
+
+			
+			<div> 
         </main>
         <div id="footer-container"></div>
     </body>
