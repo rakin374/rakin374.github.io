@@ -17,21 +17,15 @@
 </head>
 <body>
     <div class = "main">
-
-    
     <div id="dimensions">
         <div class="vstack">
             <h id = "dimensions2"></h3>
             <h3> 2100×1100⍣</h3>
         </div>
     </div>
-
-
-
     <div class = "vstack">
         <canvas id="renderCanvas"></canvas>
         <div class = "hstack">
-            
             <div class="vstack">
                 <div style="flex: 12; border: 1px solid #ccc; padding: 10px;">
                     <h3>Clocks!</h3>
@@ -40,20 +34,15 @@
                     <p>x</p>
                     <p>x</p>
                 </div>
-                
                 <div style="flex: 3; border: 1px solid #ccc; padding: 10px;">
                     <h3>center</h3>
                     
                 </div>
-                
                 <div style="flex: 3; border: 1px solid #ccc; padding: 10px;">
                     <h3>Materials</h3>
 
                 </div>
             </div>
-            
-
-
             <div class="vstack">
                 <div style="flex: 12; border: 1px solid #c60303; padding: 10px;">
                     <h3>Quick Links</h3>
@@ -61,12 +50,10 @@
                     <p>x</p>
                     <p>x</p>
                 </div>
-                
                 <div style="flex: 3; border: 1px solid #ccc; padding: 10px;">
                     <h3>center</h3>
                     
                 </div>
-                
                 <div style="flex: 3; border: 1px solid #ccc; padding: 10px;">
                     <h3>Local Controls</h3>
                     
@@ -192,70 +179,45 @@
                     aspect-ratio: 1 / 1;
                     display: block;
                 }
-                
                 </style>
-
-
-
-         
-
-
-
-
-
         </div>
     </div>
-
     </div>
-    
-
-
-
 </body>
-
 <script>
     function updateWindowDimensions() {
         document.getElementById('dimensions2').textContent = 
             `${window.innerWidth}×${window.innerHeight}⍣`;
     }
-
     // Initial update
     updateWindowDimensions();
     // Update on resize
     window.addEventListener('resize', updateWindowDimensions);
 </script>
-
 <script>
     // Get canvas and create engine
     const canvas = document.getElementById("renderCanvas");
     const engine = new BABYLON.Engine(canvas, true);
-
     // Create a scene
     const scene = new BABYLON.Scene(engine);
-
     // Create a camera
     const camera = new BABYLON.ArcRotateCamera("camera", Math.PI / 4, Math.PI / 4, 5, BABYLON.Vector3.Zero(), scene);
     camera.attachControl(canvas, true); // Allows user interaction
-
     // Create a light
     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0), scene);
     light.intensity = 0.7;
-
     // Create a 3D Cube
     const box = BABYLON.MeshBuilder.CreateBox("box", { size: 1 }, scene);
-
     // Create a material for the cube
     const material = new BABYLON.StandardMaterial("boxMaterial", scene);
     material.diffuseColor = new BABYLON.Color3(0.2, 0.6, 1); // Light Blue
     box.material = material;
-
     // Animate the cube
     engine.runRenderLoop(() => {
         box.rotation.y += 0.01;
         box.rotation.x += 0.005;
         scene.render();
     });
-
     // Handle window resizing
     window.addEventListener("resize", () => engine.resize());
 </script>

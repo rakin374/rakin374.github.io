@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title>Rakin Munim</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/vexflow/releases/vexflow-min.js" async></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="/Styles/prims_2.css">
+		<script src="/Scripts/scripts.js"></script>
+
+        <style>
+            body {
+              font-family: sans-serif;
+              padding: 20px;
+            }
+            #music-canvas {
+              border: 1px solid #ccc;
+              margin-top: 20px;
+            }
+          </style>
+
+
+	</head>
+<body>
+    <div id="header-container"></div>
+    <main class="main">
+        
+
+        <div class = "v-stack "> </div>
+        <div id = "test-stuff">
+            <h1>🎼 Music Symbols</h1>
+            <p>G clef: &#119070; (𝄞)</p>
+            <p>Quarter note: &#9833; (♩)</p>
+            <p>Beamed eighth notes: &#9835; (♪)</p>
+            <p>Beamed sixteenth notes: &#9836; (♫)</p>
+
+            <h2>🔊 Play Music</h2>
+            <audio controls>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h2>🎵 Sheet Music Example</h2>
+            <canvas id="music-canvas" width="400" height="150"></canvas>
+
+            <!-- <script>
+                const VF = Vex.Flow;
+                const canvas = document.getElementById("music-canvas");
+                const renderer = new VF.Renderer(canvas, VF.Renderer.Backends.CANVAS);
+                const context = renderer.getContext();
+
+                const stave = new VF.Stave(10, 40, 300);
+                stave.addClef("treble").addTimeSignature("4/4");
+                stave.setContext(context).draw();
+
+                const notes = [
+                new VF.StaveNote({ clef: "treble", keys: ["c/4"], duration: "q" }),
+                new VF.StaveNote({ clef: "treble", keys: ["d/4"], duration: "q" }),
+                new VF.StaveNote({ clef: "treble", keys: ["e/4"], duration: "q" }),
+                new VF.StaveNote({ clef: "treble", keys: ["f/4"], duration: "q" })
+                ];
+
+                const voice = new VF.Voice({ num_beats: 4, beat_value: 4 });
+                voice.addTickables(notes);
+
+                new VF.Formatter().joinVoices([voice]).format([voice], 300);
+                voice.draw(context, stave);
+            </script> -->
+
+        
+        </div>
+	</main>
+    <div id="footer-container"></div>
+</body>
+
+
+</html>

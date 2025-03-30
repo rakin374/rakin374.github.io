@@ -1,0 +1,231 @@
+/* Basic Container */
+.shape-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Square */
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+}
+
+/* Rectangle */
+.rectangle {
+    width: 150px;
+    height: 80px;
+    background-color: #e74c3c;
+}
+
+/* Circle */
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+}
+
+/* Oval */
+.oval {
+    width: 120px;
+    height: 80px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+}
+
+/* Triangle (Up) */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #9b59b6;
+}
+
+/* Triangle (Down) */
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #34495e;
+}
+
+/* Hexagon */
+.hexagon {
+    width: 100px;
+    height: 57.74px;
+    background-color: #16a085;
+    position: relative;
+}
+.hexagon::before,
+.hexagon::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+.hexagon::before {
+    top: -28.87px;
+    border-bottom: 28.87px solid #16a085;
+}
+.hexagon::after {
+    bottom: -28.87px;
+    border-top: 28.87px solid #16a085;
+}
+
+/* Pentagon */
+.pentagon {
+    position: relative;
+    width: 54px;
+    box-sizing: border-box;
+}
+.pentagon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 0 27px 38px 27px;
+    border-color: transparent transparent #f39c12 transparent;
+}
+.pentagon::after {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 54px;
+    height: 35px;
+    background: #f39c12;
+}
+
+/* Star */
+.star {
+    position: relative;
+    display: block;
+    color: transparent;
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid #e67e22;
+    border-left: 50px solid transparent;
+    transform: rotate(35deg);
+}
+.star:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -50px;
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid #e67e22;
+    border-left: 50px solid transparent;
+    transform: rotate(-70deg);
+}
+.star:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -32px;
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid #e67e22;
+    border-left: 50px solid transparent;
+    transform: rotate(70deg);
+}
+
+/* Parallelogram */
+.parallelogram {
+    width: 120px;
+    height: 60px;
+    background: #1abc9c;
+    transform: skew(20deg);
+}
+
+/* Trapezoid */
+.trapezoid {
+    border-bottom: 50px solid #8e44ad;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+}
+
+/* Part 2 */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Box Styling */
+.box {
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.red { background-color: #e74c3c; }
+.blue { background-color: #3498db; }
+.green { background-color: #2ecc71; }
+
+/* VStack (Vertical Stack) */
+.vstack {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+/* HStack (Horizontal Stack) */
+.hstack {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* ZStack (Overlapping Stack) */
+.zstack {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+.zstack .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.zstack .blue { top: 20px; left: 20px; }
+.zstack .green { top: 40px; left: 40px; }
+
+
+.spacer {
+    width: 100%;  /* Full width */
+    height: 20px; /* Default height */
+}
+
+/* Modifier classes for different spacing */
+.spacer.small { height: 10px; }
+.spacer.medium { height: 30px; }
+.spacer.large { height: 50px; }

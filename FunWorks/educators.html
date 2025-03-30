@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<link rel="stylesheet" href="/Styles/styles_a.css">
+		<script src="Scripts/scripts.js"></script>
+		
+	</head>
+<body>
+    <div id="header-container"></div>
+    <main class="main">
+        <div class="flex vstack">
+            <h3 class="big-caslon"> a shout out to my past teachers</h3>
+            <h6> still unfinished </h6>
+           <h6> Thank you all </h6>
+        </div>
+        <div class = "matter-container">
+            
+            
+            <h5>
+                   
+            </h5>
+
+            <script id="teachers-data" type="application/json"></script>
+            {
+                "teachers": [
+                    "Ms. Blake",
+                    "Ms. Kennedy",
+                    "Ms. Potter",
+                    "Ms. Mengha",
+                    "Ms. Scanlon",
+                    "Ms. Blakeslee",
+                    "Ms. Boken",
+                    "Mr. Gottsegen",
+                    "Ms. Trayes",
+                    "Ms. Stevens",
+                    "Ms. Marganski",
+                    "Ms. Arrons",
+                    "Ms. Culligan Oleary",
+                    "Ms. Marciano",
+                    "Ms. Steele",
+                    "Ms. Wilder",
+                    "Ms. Carbone",
+                    "Mr. Mills",
+                    "Ms. Conley",
+                    "Ms. Potter",
+                    "Mr. Mckernon (mr. puppy)",
+                    "Ms. Cournoyer",
+                    "Kong老是",
+                    "Mr. Catalde",
+                    "Ms. Roesseler",
+                    "Ms. Barnyach",
+                    "Mr. Gaipa",
+                    "Xiao 老是",
+                    "Mr. DeMeo",
+                    "Mr. Allard",
+                    "Mr. C",
+                    "Mr. Ranani",
+                    "Du 老是",
+                    "Mr. Davis",
+                    "Mr. Roy",
+                    "Coach Jacobs",
+                    "Ms. DeMeo",
+                    "Mr. Seapiglia",
+                    "Mr. Clark"
+                ],
+                "universityProfessors": [
+                    "Prof. Lei Mei Lim",
+                    "Prof. Gabriel Kuptchuk",
+                    "Prof. Kai Bernadini",
+                    "Prof. Manos Athanoussi"
+                ]
+            }
+            </script>
+
+
+
+
+
+        
+        </div>
+       
+        
+		  
+	</main>
+    <div id="footer-container"></div>
+
+	
+</body>
+
+
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the ticker HTML dynamically
+        fetch('contactTicker.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('.ticker-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading ticker:', error));
+    });
+
+    function initializeTicker() {
+        // Add event listeners or any other functionality specific to the ticker
+        const ticker = document.getElementById('ticker');
+        let isPaused = false;
+
+        function pauseTicker() {
+            isPaused = true;
+            ticker.style.animationPlayState = 'paused';
+        }
+
+        function resumeTicker() {
+            isPaused = false;
+            ticker.style.animationPlayState = 'running';
+        }
+
+        ticker.addEventListener('mouseover', pauseTicker);
+        ticker.addEventListener('mouseout', resumeTicker);
+    }
+</script>

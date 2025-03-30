@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rakin Munim</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="/Styles/prims_2.css">
+		<script src="/Scripts/scripts.js"></script>
+		
+	</head>
+<body>
+    <div id="header-container"></div>
+    <main class="main">
+        <div class="hstack">
+            
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Venus_globe.jpg" height="400" width="auto">
+            </div>
+
+        </div>
+    
+        
+        <div class = "matter-container">
+            
+        <table border="1" class="rubiks-table">
+            <thead>
+            <tr>
+                <th>P</th>
+                <th>Solve Time (seconds)</th>
+                <th>Completed?</th>
+                <th>Final State</th>
+                <th>Date & Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Ø</td>
+                <td>nil</td>
+                <td>Solved</td>
+                <td>unsolved</td>
+                <td>
+                    <time datetime="2023-10-01T14:30">2025-03-26</time>
+                </td>
+            </tr>
+            <tr>
+                <td>Ø</td>
+                <td>360</td>
+                <td>unsolved</td>
+                <td>unsolved</td>
+                <td>
+                    <time datetime="2023-10-01T14:30">2025-03-27</time>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+        </div>
+       
+        
+		  
+	</main>
+    <div id="footer-container"></div>
+
+	
+</body>
+
+
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the ticker HTML dynamically
+        fetch('contactTicker.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('.ticker-container').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading ticker:', error));
+    });
+
+    function initializeTicker() {
+        // Add event listeners or any other functionality specific to the ticker
+        const ticker = document.getElementById('ticker');
+        let isPaused = false;
+
+        function pauseTicker() {
+            isPaused = true;
+            ticker.style.animationPlayState = 'paused';
+        }
+
+        function resumeTicker() {
+            isPaused = false;
+            ticker.style.animationPlayState = 'running';
+        }
+
+        ticker.addEventListener('mouseover', pauseTicker);
+        ticker.addEventListener('mouseout', resumeTicker);
+    }
+</script>
